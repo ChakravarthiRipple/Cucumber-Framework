@@ -8,16 +8,20 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import java.time.Duration;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class LoginSteps {
 
 	WebDriver driver;
+	WebDriverWait wait;
 
 	@Given("^user is already on Login Page$")
 	public void user_already_on_login_page() {
@@ -45,23 +49,21 @@ public class LoginSteps {
 	public void user_enters_username_and_password(String username, String password) {
 		driver.findElement(By.id("email")).sendKeys(username);
 		driver.findElement(By.xpath("//input[@type='password']")).sendKeys(password);
-	}
-
-	@Then("^user clicks on login button$")
-	public void user_clicks_on_login_button() {
-		WebElement loginBtn = driver.findElement(By.xpath("//button[@type='submit']"));
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].click();", loginBtn);
+		driver.findElement(By.xpath("//button[@type='submit']")).click();
 	}
 
 	@Then("^user logout from the application$")
 	public void user_Logout_from_App() throws InterruptedException {
-		WebElement Profile = driver.findElement(By.xpath("//span[contains(text(),'Super Admin ')]"));
-		((JavascriptExecutor) driver).executeScript("arguments[0].click();", Profile);
-		Thread.sleep(3000);
-		WebElement logout = driver.findElement(By.linkText("<a _ngcontent-app-root-c150451265=\"\" href=\"javascript: void(0);\" class=\"dropdown-item text-danger\"><i _ngcontent-app-root-c150451265=\"\" class=\"bx bx-power-off font-size-16 align-middle me-1 text-danger\"></i> Logout</a>"));
-		((JavascriptExecutor) driver).executeScript("arguments[0].click();", logout);
 
+		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebElement Profile = wait.until(
+				ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'Super Admin')]")));
+		Profile.click();
+
+		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebElement logout = wait.until(
+				ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@class='dropdown-item text-danger']")));
+		logout.click();
 	}
 
 	@Then("^Close the browser$")
