@@ -6,11 +6,10 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
 		features = {"./src/test/resources/Features/SuperAdminlogin.feature","./src/test/resources/Features/AdminLogin.feature","./src/test/resources/Features/ConsumerLogin.feature"},
-		//tags = "@smoketest",
 		glue = {"StepDefination","LoginSteps"},
 		dryRun = false,
 		monochrome = true,
-		plugin = {"pretty","html:target/cucumber-reports.html"}
+		plugin = {"pretty","json:target/cucumber.json"}
 		)
 public class TestRunner extends AbstractTestNGCucumberTests {
 
