@@ -1,22 +1,34 @@
 @tag
-Feature: Ripple Smart Admin Login Feature
+Feature: Login Functionality
 
 @tag1
-Scenario Outline: Ripple Smart Admin Login Test Scenario
+Scenario Outline: Successful login with valid username and password
+    Given user is already on Login Page
+    When user enters "chakravarthi@ripplemetering.com" and "Chakri@932"
+    Then user should be redirected to the Admin dashboard
+    Then user logout from the application
+    Then Close the browser
+    
+@tag2
+Scenario Outline: Unsuccessful login with valid username and invalid password
+    Given user is already on Login Page
+    When user enters "chakravarthi@ripplemetering.com" and "Plural@12"
+    Then an error message Invalid Password is displayed
+    And user is still on the Login Page
+    Then Close the browser
+@tag3
+Scenario Outline: Unsuccessful login with invalid username
+    Given user is already on Login Page
+    When user enters "chakravarthi@ripple.com" and "Chakri@932"
+    Then an error message Invalid Email/Mobile Number is displayed
+    And user is still on the Login Page
+    Then Close the browser
+    
 
-Given user is already on Login Page
-When title of login page is Ripple
-Then user enters "<username>" and "<password>"
-Then user should be redirected to the Admin dashboard
-Then user logout from the application
-Then Close the browser
 
 
-Examples:
-	| username | password |
-	| chakravarthi@ripplemetering.com  | Chakri@932 |
+    
+    
 
 
-	
-		
-		
+   

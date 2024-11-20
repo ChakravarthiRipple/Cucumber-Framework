@@ -1,107 +1,187 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+<testng-results ignored="0" total="10" passed="10" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-11-19T12:10:01Z" name="Default suite" finished-at="2024-11-19T12:11:48Z" duration-ms="106858">
+  <suite started-at="2024-11-20T10:13:15Z" name="Default suite" finished-at="2024-11-20T10:15:13Z" duration-ms="117704">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@45312be2]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2024-11-19T12:10:01Z" name="Default test" finished-at="2024-11-19T12:11:48Z" duration-ms="106858">
+    <test started-at="2024-11-20T10:13:15Z" name="Default test" finished-at="2024-11-20T10:15:13Z" duration-ms="117704">
       <class name="Runners.TestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:Runners.TestRunner@45312be2]" started-at="2024-11-19T12:10:01Z" name="setUpClass" finished-at="2024-11-19T12:10:01Z" duration-ms="734" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:Runners.TestRunner@45312be2]" started-at="2024-11-20T10:13:15Z" name="setUpClass" finished-at="2024-11-20T10:13:16Z" duration-ms="565" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@3962ec84]]>
+                <![CDATA[org.testng.TestRunner@7ffcb232]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@45312be2]" started-at="2024-11-19T12:10:01Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-19T12:10:25Z" duration-ms="23328" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@45312be2]" started-at="2024-11-20T10:13:16Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-20T10:13:37Z" duration-ms="21168" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Ripple Smart Admin Login Test Scenario"]]>
+                <![CDATA["Successful login with valid username and password"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Ripple Smart Admin Login Feature"]]>
+                <![CDATA["Login Functionality"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@45312be2]" started-at="2024-11-19T12:10:25Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-19T12:10:46Z" duration-ms="21038" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@45312be2]" started-at="2024-11-20T10:13:37Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-20T10:13:45Z" duration-ms="7391" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Ripple Smart Consumer Login Test Scenario"]]>
+                <![CDATA["Unsuccessful login with valid username and invalid password"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Ripple Smart Consumer Login Feature"]]>
+                <![CDATA["Login Functionality"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@45312be2]" started-at="2024-11-19T12:10:46Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-19T12:11:07Z" duration-ms="20935" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@45312be2]" started-at="2024-11-20T10:13:45Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-20T10:13:52Z" duration-ms="7007" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Ripple Smart Login Test Scenario"]]>
+                <![CDATA["Unsuccessful login with invalid username"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Ripple Smart Super Admin Login Feature"]]>
+                <![CDATA["Login Functionality"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@45312be2]" started-at="2024-11-19T12:11:07Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-19T12:11:27Z" duration-ms="20606" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@45312be2]" started-at="2024-11-20T10:13:52Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-20T10:14:11Z" duration-ms="19312" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Ripple Smart Admin Login Test Scenario"]]>
+                <![CDATA["Successful login with valid username and password"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Ripple Smart Super Admin Login Feature"]]>
+                <![CDATA["Login Functionality"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@45312be2]" started-at="2024-11-19T12:11:27Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-19T12:11:48Z" duration-ms="20140" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@45312be2]" started-at="2024-11-20T10:14:11Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-20T10:14:18Z" duration-ms="6906" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Ripple Smart Consumer Login Test Scenario"]]>
+                <![CDATA["Unsuccessful login with valid username and invalid password"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Ripple Smart Super Admin Login Feature"]]>
+                <![CDATA["Login Functionality"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runners.TestRunner@45312be2]" started-at="2024-11-19T12:11:48Z" name="tearDownClass" finished-at="2024-11-19T12:11:48Z" duration-ms="42" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@45312be2]" started-at="2024-11-20T10:14:18Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-20T10:14:25Z" duration-ms="7098" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Unsuccessful login with invalid username"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Login Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@45312be2]" started-at="2024-11-20T10:14:25Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-20T10:14:46Z" duration-ms="20839" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Successful login with valid username and password"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Login Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@45312be2]" started-at="2024-11-20T10:14:46Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-20T10:14:53Z" duration-ms="6956" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Unsuccessful login with valid username and invalid password"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Login Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@45312be2]" started-at="2024-11-20T10:14:53Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-20T10:15:01Z" duration-ms="8316" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Unsuccessful login with invalid username"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Login Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@45312be2]" started-at="2024-11-20T10:15:01Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-20T10:15:13Z" duration-ms="12080" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["User clicks on Login button without filling username and password"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Login Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runners.TestRunner@45312be2]" started-at="2024-11-20T10:15:13Z" name="tearDownClass" finished-at="2024-11-20T10:15:13Z" duration-ms="41" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
