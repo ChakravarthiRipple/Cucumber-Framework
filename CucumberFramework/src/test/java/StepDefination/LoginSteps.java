@@ -6,6 +6,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -20,6 +23,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class LoginSteps {
 
 	WebDriver driver;
+	String Browser = "firefox";
 	WebDriverWait wait;
 	String urlSAdminDash = "https://nice-bush-09f0b7600.5.azurestaticapps.net/dashboard";
 	String urlAdminDash = "https://nice-bush-09f0b7600.5.azurestaticapps.net/admindashboard";
@@ -27,13 +31,24 @@ public class LoginSteps {
 
 	@Before
 	public void setup() {
-		WebDriverManager.chromedriver().setup();
-		ChromeOptions Options = new ChromeOptions();
-		Options.addArguments("disable-notifications");
-		Options.addArguments("--remote-allow-origins=*");
-		driver = new ChromeDriver(Options);
+		if (Browser.equalsIgnoreCase("chrome")) {
+			WebDriverManager.chromedriver().setup();
+			ChromeOptions Options = new ChromeOptions();
+			Options.addArguments("disable-notifications");
+			Options.addArguments("--remote-allow-origins=*");
+			driver = new ChromeDriver(Options);
+		} else if (Browser.equalsIgnoreCase("firefox")) {
+			WebDriverManager.firefoxdriver().setup();
+			driver = new FirefoxDriver();
+		} else if (Browser.equalsIgnoreCase("edge")) {
+			WebDriverManager.edgedriver().setup();
+			driver = new EdgeDriver();
+		} else if (Browser.equalsIgnoreCase("safari")) {
+			driver = new SafariDriver();
+		} else {
+			System.out.println("Error");
+		}
 		driver.manage().window().maximize();
-
 	}
 
 	@Given("^user is already on Login Page$")

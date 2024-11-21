@@ -9,6 +9,7 @@ Scenario Outline: Successful login with valid username and password
     Then user logout from the application
     Then Close the browser
     
+    
 @tag2
 Scenario Outline: Unsuccessful login with valid username and invalid password
     Given user is already on Login Page
@@ -16,6 +17,7 @@ Scenario Outline: Unsuccessful login with valid username and invalid password
     Then an error message Invalid Password is displayed
     And user is still on the Login Page
     Then Close the browser
+
 @tag3
 Scenario Outline: Unsuccessful login with invalid username
     Given user is already on Login Page
@@ -23,6 +25,7 @@ Scenario Outline: Unsuccessful login with invalid username
     Then an error message Invalid Email/Mobile Number is displayed
     And user is still on the Login Page
     Then Close the browser
+   
     
 
 
