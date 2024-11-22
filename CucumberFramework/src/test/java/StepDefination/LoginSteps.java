@@ -12,22 +12,37 @@ import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+
+import com.mailosaur.MailosaurClient;
+import com.mailosaur.MailosaurException;
+import com.mailosaur.models.Code;
+import com.mailosaur.models.Message;
+import com.mailosaur.models.MessageSearchParams;
+import com.mailosaur.models.SearchCriteria;
+
 import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+
+import java.io.IOException;
 import java.time.Duration;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class LoginSteps {
 
 	WebDriver driver;
-	String Browser = "firefox";
+	String Browser = "chrome";
 	WebDriverWait wait;
 	String urlSAdminDash = "https://nice-bush-09f0b7600.5.azurestaticapps.net/dashboard";
 	String urlAdminDash = "https://nice-bush-09f0b7600.5.azurestaticapps.net/admindashboard";
 	String urlConsumerDash = "https://nice-bush-09f0b7600.5.azurestaticapps.net/consumerdashboard";
+	String apiKey = "rLNhjagw46K8KoXy9nQkTwFtWgDof02k";
+	String serverId = "jw2rdthr";
+	String serverDomain = "jw2rdthr.mailosaur.net";
+	String from = "support@ripplemetering.com";
+	String Email = "muscle-make@jw2rdthr.mailosaur.net";
 
 	@Before
 	public void setup() {
@@ -59,10 +74,7 @@ public class LoginSteps {
 		System.out.println(title);
 		Assert.assertEquals("Ripple", title);
 
-	}
-	// Reg Exp:
-	// 1. \"([^\"]*)\"
-	// 2. \"(.*)\"
+	} // Reg Exp: // 1. \"([^\"]*)\" // 2. \"(.*)\"
 
 	@When("^user enters \"(.*)\" and \"(.*)\"$")
 	public void the_user_enters_valid_username_and_password(String username, String password)
@@ -180,6 +192,40 @@ public class LoginSteps {
 				.visibilityOfElementLocated(By.xpath("//a[contains(@class,'dropdown-item text-danger')]")));
 		logout.click();
 		Thread.sleep(3000);
+	}
+	
+	@When("^Login Email ID With OTP$")
+	public void the_user_enters() throws InterruptedException, IOException, MailosaurException {
+
+		Thread.sleep(5000);
+		driver.findElement(By.id("email")).sendKeys(Email);
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//input[@class='form-check-input login-check']")).click();
+		WebElement SendButton = driver.findElement(By.xpath("//button[contains(text(),' Send OTP ')]"));
+		if (SendButton.isDisplayed()) {
+			SendButton.click();
+		} else {
+			System.out.println("Click again");
+
+		}
+		Thread.sleep(10000);
+		MailosaurClient mailosaur = new MailosaurClient(apiKey);
+		MessageSearchParams params = new MessageSearchParams();
+		params.withServer(serverId);
+		SearchCriteria criteria = new SearchCriteria();
+		criteria.withSentTo(Email);
+		criteria.withSentFrom(from);
+		Message message = mailosaur.messages().get(params, criteria);
+		System.out.println(message.html().codes().size());
+		Code firstCode = message.html().codes().get(0);
+		System.out.println(firstCode.value());
+		String OTP = firstCode.value();
+		WebElement EnterOTP = driver.findElement(By.xpath("//input[contains(@class,'form-control ng-un')]"));
+		EnterOTP.sendKeys(OTP);
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("//button[contains(text(),'Log In')]")).click();
+		
+		
 	}
 
 }

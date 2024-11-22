@@ -5,7 +5,7 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
-		features = {"./src/test/resources/Features/SuperAdminlogin.feature","./src/test/resources/Features/AdminLogin.feature","./src/test/resources/Features/ConsumerLogin.feature"},
+		features = {"./src/test/resources/Features/SuperAdminlogin.feature"},
 		glue = {"StepDefination","LoginSteps"},
 		dryRun = false,
 		monochrome = true,

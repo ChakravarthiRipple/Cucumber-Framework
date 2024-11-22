@@ -1,6 +1,5 @@
 @tag
 Feature: Login Functionality
-
 @tag1
 Scenario Outline: Successful login with valid username and password
     Given user is already on Login Page
@@ -34,6 +33,16 @@ Scenario: User clicks on Login button without filling username and password
     Then an error message Email / Mobile Number is required is displayed
     And an error message Password is required is displayed
     Then Close the browser
+    
+@tag5
+Scenario: User Enter into application Email ID with OTP requirest
+    Given user is already on Login Page
+    When Login Email ID With OTP
+    Then user should be redirected to the Admin dashboard
+    Then user logout from the application
+    Then Close the browser
+    
+    
   
 
 
