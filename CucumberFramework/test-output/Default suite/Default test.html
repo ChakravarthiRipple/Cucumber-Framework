@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>6/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Nov 22 11:48:23 IST 2024</td>
+<td>Started on:</td><td>Fri Nov 22 17:39:05 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>43 seconds (43594 ms)</td>
+<tr><td>Total time:</td><td>417 seconds (417056 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,38 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Successful login Valid Email ID with Valid OTP", "Super Admin Login Functionality"</td>
+<td><div><pre>java.lang.AssertionError: expected [https://nice-bush-09f0b7600.5.azurestaticapps.net/auth/login?returnUrl=%2Fdashboard] but found [https://nice-bush-09f0b7600.5.azurestaticapps.net/dashboard]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:453)
+	at org.testng.Assert.assertEquals(Assert.java:463)
+	at StepDefination.LoginSteps.Super_Admin_Dashboard_Validation(LoginSteps.java:73)
+	at ✽.user is redirected to the Super Admin Dashboard(file:///C:/Users/chakr/git/repository2/CucumberFramework/./src/test/resources/Features/SuperAdminlogin.feature:36)
+</pre></div><a href='#' onClick='toggleBox("stack-trace123458189", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace123458189'><pre>java.lang.AssertionError: expected [https://nice-bush-09f0b7600.5.azurestaticapps.net/auth/login?returnUrl=%2Fdashboard] but found [https://nice-bush-09f0b7600.5.azurestaticapps.net/dashboard]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:453)
+	at org.testng.Assert.assertEquals(Assert.java:463)
+	at StepDefination.LoginSteps.Super_Admin_Dashboard_Validation(LoginSteps.java:73)
+	at ✽.user is redirected to the Super Admin Dashboard(file:///C:/Users/chakr/git/repository2/CucumberFramework/./src/test/resources/Features/SuperAdminlogin.feature:36)
+</pre></div></td>
+<td>35</td>
+<td>Runners.TestRunner@2e6a5539</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -75,9 +107,34 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='Runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User Enter into application Email ID with OTP requirest", "Login Functionality"</td>
+<td title='Runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Successful login with valid username and password", "Super Admin Login Functionality"</td>
 <td></td>
-<td>42</td>
+<td>20</td>
+<td>Runners.TestRunner@2e6a5539</td></tr>
+<tr>
+<td title='Runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Unsuccessful login with valid username and invalid password", "Super Admin Login Functionality"</td>
+<td></td>
+<td>6</td>
+<td>Runners.TestRunner@2e6a5539</td></tr>
+<tr>
+<td title='Runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Unsuccessful login with invalid username", "Super Admin Login Functionality"</td>
+<td></td>
+<td>7</td>
+<td>Runners.TestRunner@2e6a5539</td></tr>
+<tr>
+<td title='Runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User clicks on Login button without username and password", "Super Admin Login Functionality"</td>
+<td></td>
+<td>12</td>
+<td>Runners.TestRunner@2e6a5539</td></tr>
+<tr>
+<td title='Runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Unsuccessful login Email ID with Inavlid OTP", "Super Admin Login Functionality"</td>
+<td></td>
+<td>19</td>
+<td>Runners.TestRunner@2e6a5539</td></tr>
+<tr>
+<td title='Runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Unsuccessful login Email ID with Expired OTP", "Super Admin Login Functionality"</td>
+<td></td>
+<td>314</td>
 <td>Runners.TestRunner@2e6a5539</td></tr>
 </table><p>
 </body>

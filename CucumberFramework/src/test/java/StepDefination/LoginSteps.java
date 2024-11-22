@@ -4,11 +4,6 @@ package StepDefination;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -20,7 +15,6 @@ import com.mailosaur.models.Message;
 import com.mailosaur.models.MessageSearchParams;
 import com.mailosaur.models.SearchCriteria;
 
-import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -28,12 +22,9 @@ import io.cucumber.java.en.When;
 
 import java.io.IOException;
 import java.time.Duration;
-import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class LoginSteps {
 
-	WebDriver driver;
-	String Browser = "chrome";
 	WebDriverWait wait;
 	String urlSAdminDash = "https://nice-bush-09f0b7600.5.azurestaticapps.net/dashboard";
 	String urlAdminDash = "https://nice-bush-09f0b7600.5.azurestaticapps.net/admindashboard";
@@ -43,28 +34,13 @@ public class LoginSteps {
 	String serverDomain = "jw2rdthr.mailosaur.net";
 	String from = "support@ripplemetering.com";
 	String Email = "muscle-make@jw2rdthr.mailosaur.net";
+	
+	private WebDriver driver;
 
-	@Before
-	public void setup() {
-		if (Browser.equalsIgnoreCase("chrome")) {
-			WebDriverManager.chromedriver().setup();
-			ChromeOptions Options = new ChromeOptions();
-			Options.addArguments("disable-notifications");
-			Options.addArguments("--remote-allow-origins=*");
-			driver = new ChromeDriver(Options);
-		} else if (Browser.equalsIgnoreCase("firefox")) {
-			WebDriverManager.firefoxdriver().setup();
-			driver = new FirefoxDriver();
-		} else if (Browser.equalsIgnoreCase("edge")) {
-			WebDriverManager.edgedriver().setup();
-			driver = new EdgeDriver();
-		} else if (Browser.equalsIgnoreCase("safari")) {
-			driver = new SafariDriver();
-		} else {
-			System.out.println("Error");
-		}
-		driver.manage().window().maximize();
-	}
+    public LoginSteps() {
+        // Ensure WebDriver is passed from the hook
+        this.driver = Hooks.getDriver();
+    }
 
 	@Given("^user is already on Login Page$")
 	public void user_already_on_login_page() {
@@ -132,7 +108,7 @@ public class LoginSteps {
 	}
 
 	@When("^the user leaves blank fileds and clicks on the Login button$")
-	public void user_clicks_on_login_button_without_Filling_Username_and_password() throws InterruptedException {
+	public void user_clicks_on_login_button_without_Username_and_password() throws InterruptedException {
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("//button[@type='submit']")).click();
 
@@ -193,10 +169,9 @@ public class LoginSteps {
 		logout.click();
 		Thread.sleep(3000);
 	}
-	
-	@When("^Login Email ID With OTP$")
-	public void the_user_enters() throws InterruptedException, IOException, MailosaurException {
 
+	@When("^user enter Email/Mobile and Click on Send button$")
+	public void Enter_Details_and_Clickon_login_button() throws InterruptedException {
 		Thread.sleep(5000);
 		driver.findElement(By.id("email")).sendKeys(Email);
 		Thread.sleep(2000);
@@ -208,6 +183,11 @@ public class LoginSteps {
 			System.out.println("Click again");
 
 		}
+	}
+
+	@When("^Login Valid Email ID With Valid OTP$")
+	public void Successful_login_Email_ID_with_OTP_requirest()
+			throws InterruptedException, IOException, MailosaurException {
 		Thread.sleep(10000);
 		MailosaurClient mailosaur = new MailosaurClient(apiKey);
 		MessageSearchParams params = new MessageSearchParams();
@@ -224,8 +204,53 @@ public class LoginSteps {
 		EnterOTP.sendKeys(OTP);
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("//button[contains(text(),'Log In')]")).click();
-		
-		
+
+	}
+
+	@When("^Login Valid Email ID With Invalid OTP$")
+	public void Unsuccessful_login_Email_ID_with_Inavlid_OTP_requirest()
+			throws InterruptedException, IOException, MailosaurException {
+		Thread.sleep(5000);
+		WebElement EnterOTP = driver.findElement(By.xpath("//input[contains(@class,'form-control ng-un')]"));
+		EnterOTP.sendKeys("225566");
+		Thread.sleep(1000);
+		driver.findElement(By.xpath("//button[contains(text(),'Log In')]")).click();
+		Thread.sleep(3000);
+		String Invalid = driver.findElement(By.xpath("//h2[contains(text(),'Invalid OTP')]")).getText();
+		System.out.println(Invalid);
+		Assert.assertEquals("Invalid OTP", Invalid);
+		driver.findElement(By.xpath("//button[contains(text(),'OK')]")).click();
+		String InvalidLoginpage = driver.findElement(By.xpath("//div[contains(text(),' Invalid OTP ')]")).getText();
+		Assert.assertEquals(Invalid, InvalidLoginpage);
+
+	}
+
+	@When("^Unsuccessful login Email ID with Expired OTP$")
+	public void Unsuccessful_login_Email_ID_with_Expired_OTP()
+			throws InterruptedException, IOException, MailosaurException {
+		Thread.sleep(5 * 60 * 1000);
+		MailosaurClient mailosaur = new MailosaurClient(apiKey);
+		MessageSearchParams params = new MessageSearchParams();
+		params.withServer(serverId);
+		SearchCriteria criteria = new SearchCriteria();
+		criteria.withSentTo(Email);
+		criteria.withSentFrom(from);
+		Message message = mailosaur.messages().get(params, criteria);
+		System.out.println(message.html().codes().size());
+		Code firstCode = message.html().codes().get(0);
+		System.out.println(firstCode.value());
+		String OTP = firstCode.value();
+		WebElement EnterOTP = driver.findElement(By.xpath("//input[contains(@class,'form-control ng-un')]"));
+		EnterOTP.sendKeys(OTP);
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//button[contains(text(),'Log In')]")).click();
+		String OTPExpiry = driver.findElement(By.xpath("//div[contains(text(),'OTP has expired')]")).getText();
+		System.out.println(OTPExpiry);
+		Assert.assertEquals("OTP has expired", OTPExpiry);
+		driver.findElement(By.xpath("//button[contains(text(),'OK')]")).click();
+		String OTPExpiryloginpage = driver.findElement(By.xpath("//div[contains(text(),' OTP has expired ')]"))
+				.getText();
+		Assert.assertEquals(OTPExpiryloginpage, OTPExpiry);
 	}
 
 }
