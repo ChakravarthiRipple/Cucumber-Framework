@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="7" passed="6" failed="1" skipped="0">
+<testng-results ignored="0" total="10" passed="6" failed="4" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-11-22T12:09:05Z" name="Default suite" finished-at="2024-11-22T12:16:02Z" duration-ms="417056">
+  <suite started-at="2024-11-23T07:19:56Z" name="Default suite" finished-at="2024-11-23T07:28:03Z" duration-ms="486856">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@2e6a5539]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2024-11-22T12:09:05Z" name="Default test" finished-at="2024-11-22T12:16:02Z" duration-ms="417056">
+    <test started-at="2024-11-23T07:19:56Z" name="Default test" finished-at="2024-11-23T07:28:03Z" duration-ms="486856">
       <class name="Runners.TestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:Runners.TestRunner@2e6a5539]" started-at="2024-11-22T12:09:05Z" name="setUpClass" finished-at="2024-11-22T12:09:05Z" duration-ms="277" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:Runners.TestRunner@2e6a5539]" started-at="2024-11-23T07:19:56Z" name="setUpClass" finished-at="2024-11-23T07:19:56Z" duration-ms="375" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@12214f2f]]>
+                <![CDATA[org.testng.TestRunner@73234691]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@2e6a5539]" started-at="2024-11-22T12:09:05Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-22T12:09:25Z" duration-ms="20346" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@2e6a5539]" started-at="2024-11-23T07:19:56Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-23T07:20:19Z" duration-ms="22401" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -37,7 +37,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@2e6a5539]" started-at="2024-11-22T12:09:25Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-22T12:09:32Z" duration-ms="6668" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@2e6a5539]" started-at="2024-11-23T07:20:19Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-23T07:20:27Z" duration-ms="7890" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -53,7 +53,184 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@2e6a5539]" started-at="2024-11-22T12:09:32Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-22T12:09:39Z" duration-ms="7176" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@2e6a5539]" started-at="2024-11-23T07:20:27Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-23T07:20:45Z" duration-ms="18052" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Unsuccessful login with valid username and invalid password"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Super Admin Login Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//h2[contains(text(),'Invalid Password')]"}
+  (Session info: chrome=131.0.6778.86)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.8.1', revision: '8ebccac989'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.13'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9104c310b6af8fb7b28513eaccef4768, findElement {using=xpath, value=//h2[contains(text(),'Invalid Password')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\chakr\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51270}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51270/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9104c310b6af8fb7b28513eaccef4768]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//h2[contains(text(),'Invalid Password')]"}
+  (Session info: chrome=131.0.6778.86)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.8.1', revision: '8ebccac989'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.13'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9104c310b6af8fb7b28513eaccef4768, findElement {using=xpath, value=//h2[contains(text(),'Invalid Password')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\chakr\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51270}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51270/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9104c310b6af8fb7b28513eaccef4768
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+at StepDefination.LoginSteps.Invalid_password(LoginSteps.java:80)
+at ✽.an error message Invalid Password is displayed(file:///C:/Users/chakr/git/repository2/CucumberFramework/./src/test/resources/Features/SuperAdminlogin.feature:21)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@2e6a5539]" started-at="2024-11-23T07:20:45Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-23T07:21:03Z" duration-ms="18630" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Unsuccessful login with valid username and invalid password"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Super Admin Login Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//h2[contains(text(),'Invalid Password')]"}
+  (Session info: chrome=131.0.6778.86)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.8.1', revision: '8ebccac989'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.13'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b08735e2e050aca4185bb5434da79396, findElement {using=xpath, value=//h2[contains(text(),'Invalid Password')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\chakr\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51303}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51303/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b08735e2e050aca4185bb5434da79396]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//h2[contains(text(),'Invalid Password')]"}
+  (Session info: chrome=131.0.6778.86)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.8.1', revision: '8ebccac989'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.13'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b08735e2e050aca4185bb5434da79396, findElement {using=xpath, value=//h2[contains(text(),'Invalid Password')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\chakr\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51303}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51303/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b08735e2e050aca4185bb5434da79396
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+at StepDefination.LoginSteps.Invalid_password(LoginSteps.java:80)
+at ✽.an error message Invalid Password is displayed(file:///C:/Users/chakr/git/repository2/CucumberFramework/./src/test/resources/Features/SuperAdminlogin.feature:21)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@2e6a5539]" started-at="2024-11-23T07:21:03Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-23T07:21:21Z" duration-ms="17159" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Unsuccessful login with valid username and invalid password"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Super Admin Login Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//h2[contains(text(),'Invalid Password')]"}
+  (Session info: chrome=131.0.6778.86)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.8.1', revision: '8ebccac989'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.13'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f7f4c6eca2adb286e494c00903c4de56, findElement {using=xpath, value=//h2[contains(text(),'Invalid Password')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\chakr\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51339}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51339/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f7f4c6eca2adb286e494c00903c4de56]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//h2[contains(text(),'Invalid Password')]"}
+  (Session info: chrome=131.0.6778.86)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.8.1', revision: '8ebccac989'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.13'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f7f4c6eca2adb286e494c00903c4de56, findElement {using=xpath, value=//h2[contains(text(),'Invalid Password')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\chakr\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51339}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51339/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f7f4c6eca2adb286e494c00903c4de56
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+at StepDefination.LoginSteps.Invalid_password(LoginSteps.java:80)
+at ✽.an error message Invalid Password is displayed(file:///C:/Users/chakr/git/repository2/CucumberFramework/./src/test/resources/Features/SuperAdminlogin.feature:21)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@2e6a5539]" started-at="2024-11-23T07:21:21Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-23T07:21:29Z" duration-ms="8861" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -69,7 +246,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@2e6a5539]" started-at="2024-11-22T12:09:39Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-22T12:09:51Z" duration-ms="12321" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@2e6a5539]" started-at="2024-11-23T07:21:29Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-23T07:21:43Z" duration-ms="13078" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -85,7 +262,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@2e6a5539]" started-at="2024-11-22T12:09:51Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-22T12:10:26Z" duration-ms="35160" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@2e6a5539]" started-at="2024-11-23T07:21:43Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-23T07:22:21Z" duration-ms="38370" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -111,14 +288,14 @@ at org.testng.Assert.assertEquals(Assert.java:118)
 at org.testng.Assert.assertEquals(Assert.java:453)
 at org.testng.Assert.assertEquals(Assert.java:463)
 at StepDefination.LoginSteps.Super_Admin_Dashboard_Validation(LoginSteps.java:73)
-at ✽.user is redirected to the Super Admin Dashboard(file:///C:/Users/chakr/git/repository2/CucumberFramework/./src/test/resources/Features/SuperAdminlogin.feature:36)
+at ✽.user is redirected to the Super Admin Dashboard(file:///C:/Users/chakr/git/repository2/CucumberFramework/./src/test/resources/Features/SuperAdminlogin.feature:54)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@2e6a5539]" started-at="2024-11-22T12:10:26Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-22T12:10:46Z" duration-ms="19968" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@2e6a5539]" started-at="2024-11-23T07:22:21Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-23T07:22:41Z" duration-ms="20323" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -134,7 +311,7 @@ at ✽.user is redirected to the Super Admin Dashboard(file:///C:/Users/chakr/gi
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@2e6a5539]" started-at="2024-11-22T12:10:46Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-22T12:16:01Z" duration-ms="314738" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@2e6a5539]" started-at="2024-11-23T07:22:41Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-23T07:28:02Z" duration-ms="321193" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -150,7 +327,7 @@ at ✽.user is redirected to the Super Admin Dashboard(file:///C:/Users/chakr/gi
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runners.TestRunner@2e6a5539]" started-at="2024-11-22T12:16:01Z" name="tearDownClass" finished-at="2024-11-22T12:16:02Z" duration-ms="378" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runners.TestRunner@2e6a5539]" started-at="2024-11-23T07:28:02Z" name="tearDownClass" finished-at="2024-11-23T07:28:03Z" duration-ms="502" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

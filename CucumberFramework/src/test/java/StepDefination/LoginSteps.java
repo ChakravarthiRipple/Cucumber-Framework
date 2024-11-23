@@ -34,13 +34,13 @@ public class LoginSteps {
 	String serverDomain = "jw2rdthr.mailosaur.net";
 	String from = "support@ripplemetering.com";
 	String Email = "muscle-make@jw2rdthr.mailosaur.net";
-	
+
 	private WebDriver driver;
 
-    public LoginSteps() {
-        // Ensure WebDriver is passed from the hook
-        this.driver = Hooks.getDriver();
-    }
+	public LoginSteps() {
+
+		this.driver = Hooks.getDriver();
+	}
 
 	@Given("^user is already on Login Page$")
 	public void user_already_on_login_page() {
@@ -50,7 +50,7 @@ public class LoginSteps {
 		System.out.println(title);
 		Assert.assertEquals("Ripple", title);
 
-	} // Reg Exp: // 1. \"([^\"]*)\" // 2. \"(.*)\"
+	}
 
 	@When("^user enters \"(.*)\" and \"(.*)\"$")
 	public void the_user_enters_valid_username_and_password(String username, String password)

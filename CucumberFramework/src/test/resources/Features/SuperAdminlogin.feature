@@ -1,63 +1,67 @@
-
 Feature: Super Admin Login Functionality
 
-Scenario Outline: Successful login with valid username and password
+  Background: 
     Given user is already on Login Page
-    When user enters "superadmin@pluraltechnology.com" and "Plural@1234"
+
+  Scenario Outline: Successful login with valid username and password
+    When user enters "<username>" and "<password>"
     Then user is redirected to the Super Admin Dashboard
     Then user logout from the application
-    Then Close the browser    
+    Then Close the browser
 
-Scenario Outline: Unsuccessful login with valid username and invalid password
-    Given user is already on Login Page
-    When user enters "superadmin@pluraltechnology.com" and "Plural@12"
+    Examples: 
+      | username                           | password    |
+      | superadmin@pluraltechnology.com    | Plural@1234 |
+      | ripple.shoaib@gmail.com            |             |
+      | Ripple.rajveer@gmail.com           |             |
+      | ripple.nidhi@gmail.com             |             |
+      | muscle-make@jw2rdthr.mailosaur.net | Chakri@932  |
+
+  Scenario Outline: Unsuccessful login with valid username and invalid password
+    When user enters "<username>" and "<password>"
     Then an error message Invalid Password is displayed
     And user is still on the Login Page
-    Then Close the browser   
+    Then Close the browser
 
-Scenario Outline: Unsuccessful login with invalid username
-    Given user is already on Login Page
-    When user enters "superadmin@plural.com" and "Plural@1234"
+    Examples: 
+      | username                        | password  |
+      | superadmin@pluraltechnology.com | Plural@12 |
+      | ripple.shoaib@gmail.com         | Plural@80 |
+      | Ripple.rajveer@gmail.com        | Ripple@12 |
+      | ripple.nidhi@gmail.com          | Ribs@123  |
+
+  Scenario Outline: Unsuccessful login with invalid username
+    When user enters "<username>" and "<password>"
     Then an error message Invalid Email/Mobile Number is displayed
     And user is still on the Login Page
-    Then Close the browser    
+    Then Close the browser
 
-Scenario: User clicks on Login button without username and password
-    Given user is already on Login Page
+    Examples: 
+      | username               | password    |
+      | superadmin@plural.com  | Plural@1234 |
+      | rile.shoaib@gmail.com  |             |
+      | Ripple.raeer@gmail.com |             |
+      | riple.nidi@gmail.com   |             |
+
+  Scenario: User clicks on Login button without username and password
     When the user leaves blank fileds and clicks on the Login button
     Then an error message Email / Mobile Number is required is displayed
     And an error message Password is required is displayed
     Then Close the browser
 
-Scenario: Successful login Valid Email ID with Valid OTP
-    Given user is already on Login Page
+  Scenario: Successful login Valid Email ID with Valid OTP
     When user enter Email/Mobile and Click on Send button
     When Login Valid Email ID With Valid OTP
     Then user is redirected to the Super Admin Dashboard
     Then user logout from the application
     Then Close the browser
 
-Scenario: Unsuccessful login Email ID with Inavlid OTP 
-    Given user is already on Login Page
+  Scenario: Unsuccessful login Email ID with Inavlid OTP
     When user enter Email/Mobile and Click on Send button
     When Login Valid Email ID With Invalid OTP
     Then Close the browser
 
-
-Scenario: Unsuccessful login Email ID with Expired OTP 
-   Given user is already on Login Page
+  Scenario: Unsuccessful login Email ID with Expired OTP
     When user enter Email/Mobile and Click on Send button
     When Unsuccessful login Email ID with Expired OTP
     Then Close the browser
-
-
-    
-    
-  
-
-
-    
-    
-
-
-   
