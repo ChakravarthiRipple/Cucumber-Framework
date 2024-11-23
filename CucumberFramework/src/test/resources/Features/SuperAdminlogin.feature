@@ -10,12 +10,8 @@ Feature: Super Admin Login Functionality
     Then Close the browser
 
     Examples: 
-      | username                           | password    |
-      | superadmin@pluraltechnology.com    | Plural@1234 |
-      | ripple.shoaib@gmail.com            |             |
-      | Ripple.rajveer@gmail.com           |             |
-      | ripple.nidhi@gmail.com             |             |
-      | muscle-make@jw2rdthr.mailosaur.net | Chakri@932  |
+      | username                        | password    |
+      | superadmin@pluraltechnology.com | Plural@1234 |
 
   Scenario Outline: Unsuccessful login with valid username and invalid password
     When user enters "<username>" and "<password>"
@@ -26,9 +22,6 @@ Feature: Super Admin Login Functionality
     Examples: 
       | username                        | password  |
       | superadmin@pluraltechnology.com | Plural@12 |
-      | ripple.shoaib@gmail.com         | Plural@80 |
-      | Ripple.rajveer@gmail.com        | Ripple@12 |
-      | ripple.nidhi@gmail.com          | Ribs@123  |
 
   Scenario Outline: Unsuccessful login with invalid username
     When user enters "<username>" and "<password>"
@@ -37,11 +30,8 @@ Feature: Super Admin Login Functionality
     Then Close the browser
 
     Examples: 
-      | username               | password    |
-      | superadmin@plural.com  | Plural@1234 |
-      | rile.shoaib@gmail.com  |             |
-      | Ripple.raeer@gmail.com |             |
-      | riple.nidi@gmail.com   |             |
+      | username              | password    |
+      | superadmin@plural.com | Plural@1234 |
 
   Scenario: User clicks on Login button without username and password
     When the user leaves blank fileds and clicks on the Login button

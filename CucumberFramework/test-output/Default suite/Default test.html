@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>6/4/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>3/4/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sat Nov 23 12:49:56 IST 2024</td>
+<td>Started on:</td><td>Sat Nov 23 17:21:56 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>486 seconds (486856 ms)</td>
+<tr><td>Total time:</td><td>520 seconds (520220 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,64 +75,28 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='Runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Unsuccessful login with valid username and invalid password", "Super Admin Login Functionality"</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//h2[contains(text(),&apos;Invalid Password&apos;)]&quot;}
-  (Session info: chrome=131.0.6778.86)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: &apos;4.8.1&apos;, revision: &apos;8ebccac989&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.13&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [9104c310b6af8fb7b28513eaccef4768, findElement {using=xpath, value=//h2[contains(text(),&apos;Invalid Password&apos;)]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\chakr\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51270}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51270/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 9104c310b6af8fb7b28513eaccef4768
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-	at StepDefination.LoginSteps.Invalid_password(LoginSteps.java:80)
-	at ✽.an error message Invalid Password is displayed(file:///C:/Users/chakr/git/repository2/CucumberFramework/./src/test/resources/Features/SuperAdminlogin.feature:21)
-</pre></div><a href='#' onClick='toggleBox("stack-trace814886797", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace814886797'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//h2[contains(text(),&apos;Invalid Password&apos;)]&quot;}
-  (Session info: chrome=131.0.6778.86)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: &apos;4.8.1&apos;, revision: &apos;8ebccac989&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.13&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [9104c310b6af8fb7b28513eaccef4768, findElement {using=xpath, value=//h2[contains(text(),&apos;Invalid Password&apos;)]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\chakr\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51270}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51270/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 9104c310b6af8fb7b28513eaccef4768
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-	at StepDefination.LoginSteps.Invalid_password(LoginSteps.java:80)
-	at ✽.an error message Invalid Password is displayed(file:///C:/Users/chakr/git/repository2/CucumberFramework/./src/test/resources/Features/SuperAdminlogin.feature:21)
+<td title='Runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Successful login with valid username and password", "Super Admin Login Functionality"</td>
+<td><div><pre>java.lang.AssertionError: expected [https://nice-bush-09f0b7600.5.azurestaticapps.net/auth/login?returnUrl=%2Fdashboard] but found [https://nice-bush-09f0b7600.5.azurestaticapps.net/dashboard]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:453)
+	at org.testng.Assert.assertEquals(Assert.java:463)
+	at StepDefination.LoginSteps.Super_Admin_Dashboard_Validation(LoginSteps.java:73)
+	at ✽.user is redirected to the Super Admin Dashboard(file:///C:/Users/chakr/git/repository2/CucumberFramework/./src/test/resources/Features/SuperAdminlogin.feature:8)
+</pre></div><a href='#' onClick='toggleBox("stack-trace876487258", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace876487258'><pre>java.lang.AssertionError: expected [https://nice-bush-09f0b7600.5.azurestaticapps.net/auth/login?returnUrl=%2Fdashboard] but found [https://nice-bush-09f0b7600.5.azurestaticapps.net/dashboard]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:453)
+	at org.testng.Assert.assertEquals(Assert.java:463)
+	at StepDefination.LoginSteps.Super_Admin_Dashboard_Validation(LoginSteps.java:73)
+	at ✽.user is redirected to the Super Admin Dashboard(file:///C:/Users/chakr/git/repository2/CucumberFramework/./src/test/resources/Features/SuperAdminlogin.feature:8)
 </pre></div></td>
-<td>18</td>
+<td>24</td>
 <td>Runners.TestRunner@2e6a5539</td></tr>
 <tr>
 <td title='Runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Unsuccessful login with valid username and invalid password", "Super Admin Login Functionality"</td>
@@ -142,9 +106,9 @@ For documentation on this error, please visit: https://selenium.dev/exceptions/#
 Build info: version: &apos;4.8.1&apos;, revision: &apos;8ebccac989&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.13&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [b08735e2e050aca4185bb5434da79396, findElement {using=xpath, value=//h2[contains(text(),&apos;Invalid Password&apos;)]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\chakr\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51303}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51303/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: b08735e2e050aca4185bb5434da79396
+Command: [5566ae3400b6a697e0f98cdef0ca01ae, findElement {using=xpath, value=//h2[contains(text(),&apos;Invalid Password&apos;)]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\chakr\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55122}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55122/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5566ae3400b6a697e0f98cdef0ca01ae
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -162,17 +126,17 @@ Session ID: b08735e2e050aca4185bb5434da79396
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
 	at StepDefination.LoginSteps.Invalid_password(LoginSteps.java:80)
-	at ✽.an error message Invalid Password is displayed(file:///C:/Users/chakr/git/repository2/CucumberFramework/./src/test/resources/Features/SuperAdminlogin.feature:21)
-</pre></div><a href='#' onClick='toggleBox("stack-trace623820846", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace623820846'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//h2[contains(text(),&apos;Invalid Password&apos;)]&quot;}
+	at ✽.an error message Invalid Password is displayed(file:///C:/Users/chakr/git/repository2/CucumberFramework/./src/test/resources/Features/SuperAdminlogin.feature:18)
+</pre></div><a href='#' onClick='toggleBox("stack-trace2138849804", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2138849804'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//h2[contains(text(),&apos;Invalid Password&apos;)]&quot;}
   (Session info: chrome=131.0.6778.86)
 For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: &apos;4.8.1&apos;, revision: &apos;8ebccac989&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.13&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [b08735e2e050aca4185bb5434da79396, findElement {using=xpath, value=//h2[contains(text(),&apos;Invalid Password&apos;)]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\chakr\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51303}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51303/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: b08735e2e050aca4185bb5434da79396
+Command: [5566ae3400b6a697e0f98cdef0ca01ae, findElement {using=xpath, value=//h2[contains(text(),&apos;Invalid Password&apos;)]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\chakr\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55122}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55122/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5566ae3400b6a697e0f98cdef0ca01ae
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -190,21 +154,21 @@ Session ID: b08735e2e050aca4185bb5434da79396
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
 	at StepDefination.LoginSteps.Invalid_password(LoginSteps.java:80)
-	at ✽.an error message Invalid Password is displayed(file:///C:/Users/chakr/git/repository2/CucumberFramework/./src/test/resources/Features/SuperAdminlogin.feature:21)
+	at ✽.an error message Invalid Password is displayed(file:///C:/Users/chakr/git/repository2/CucumberFramework/./src/test/resources/Features/SuperAdminlogin.feature:18)
 </pre></div></td>
-<td>18</td>
+<td>29</td>
 <td>Runners.TestRunner@2e6a5539</td></tr>
 <tr>
-<td title='Runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Unsuccessful login with valid username and invalid password", "Super Admin Login Functionality"</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//h2[contains(text(),&apos;Invalid Password&apos;)]&quot;}
+<td title='Runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Unsuccessful login with invalid username", "Super Admin Login Functionality"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//h2[contains(text(),&apos;Invalid Email/Mobile Number&apos;)]&quot;}
   (Session info: chrome=131.0.6778.86)
 For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: &apos;4.8.1&apos;, revision: &apos;8ebccac989&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.13&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [f7f4c6eca2adb286e494c00903c4de56, findElement {using=xpath, value=//h2[contains(text(),&apos;Invalid Password&apos;)]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\chakr\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51339}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51339/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: f7f4c6eca2adb286e494c00903c4de56
+Command: [8acc45dabfa388868bf67e4cea0c3f00, findElement {using=xpath, value=//h2[contains(text(),&apos;Invalid Email/Mobile Number&apos;)]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\chakr\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55168}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55168/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8acc45dabfa388868bf67e4cea0c3f00
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -221,18 +185,18 @@ Session ID: f7f4c6eca2adb286e494c00903c4de56
 	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-	at StepDefination.LoginSteps.Invalid_password(LoginSteps.java:80)
-	at ✽.an error message Invalid Password is displayed(file:///C:/Users/chakr/git/repository2/CucumberFramework/./src/test/resources/Features/SuperAdminlogin.feature:21)
-</pre></div><a href='#' onClick='toggleBox("stack-trace385349023", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace385349023'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//h2[contains(text(),&apos;Invalid Password&apos;)]&quot;}
+	at StepDefination.LoginSteps.Invalid_Username(LoginSteps.java:98)
+	at ✽.an error message Invalid Email/Mobile Number is displayed(file:///C:/Users/chakr/git/repository2/CucumberFramework/./src/test/resources/Features/SuperAdminlogin.feature:28)
+</pre></div><a href='#' onClick='toggleBox("stack-trace726893578", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace726893578'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//h2[contains(text(),&apos;Invalid Email/Mobile Number&apos;)]&quot;}
   (Session info: chrome=131.0.6778.86)
 For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: &apos;4.8.1&apos;, revision: &apos;8ebccac989&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.13&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [f7f4c6eca2adb286e494c00903c4de56, findElement {using=xpath, value=//h2[contains(text(),&apos;Invalid Password&apos;)]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\chakr\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51339}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51339/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: f7f4c6eca2adb286e494c00903c4de56
+Command: [8acc45dabfa388868bf67e4cea0c3f00, findElement {using=xpath, value=//h2[contains(text(),&apos;Invalid Email/Mobile Number&apos;)]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\chakr\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55168}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55168/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8acc45dabfa388868bf67e4cea0c3f00
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -249,10 +213,10 @@ Session ID: f7f4c6eca2adb286e494c00903c4de56
 	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-	at StepDefination.LoginSteps.Invalid_password(LoginSteps.java:80)
-	at ✽.an error message Invalid Password is displayed(file:///C:/Users/chakr/git/repository2/CucumberFramework/./src/test/resources/Features/SuperAdminlogin.feature:21)
+	at StepDefination.LoginSteps.Invalid_Username(LoginSteps.java:98)
+	at ✽.an error message Invalid Email/Mobile Number is displayed(file:///C:/Users/chakr/git/repository2/CucumberFramework/./src/test/resources/Features/SuperAdminlogin.feature:28)
 </pre></div></td>
-<td>17</td>
+<td>27</td>
 <td>Runners.TestRunner@2e6a5539</td></tr>
 <tr>
 <td title='Runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Successful login Valid Email ID with Valid OTP", "Super Admin Login Functionality"</td>
@@ -264,9 +228,9 @@ Session ID: f7f4c6eca2adb286e494c00903c4de56
 	at org.testng.Assert.assertEquals(Assert.java:453)
 	at org.testng.Assert.assertEquals(Assert.java:463)
 	at StepDefination.LoginSteps.Super_Admin_Dashboard_Validation(LoginSteps.java:73)
-	at ✽.user is redirected to the Super Admin Dashboard(file:///C:/Users/chakr/git/repository2/CucumberFramework/./src/test/resources/Features/SuperAdminlogin.feature:54)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1907370139", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1907370139'><pre>java.lang.AssertionError: expected [https://nice-bush-09f0b7600.5.azurestaticapps.net/auth/login?returnUrl=%2Fdashboard] but found [https://nice-bush-09f0b7600.5.azurestaticapps.net/dashboard]
+	at ✽.user is redirected to the Super Admin Dashboard(file:///C:/Users/chakr/git/repository2/CucumberFramework/./src/test/resources/Features/SuperAdminlogin.feature:45)
+</pre></div><a href='#' onClick='toggleBox("stack-trace502863983", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace502863983'><pre>java.lang.AssertionError: expected [https://nice-bush-09f0b7600.5.azurestaticapps.net/auth/login?returnUrl=%2Fdashboard] but found [https://nice-bush-09f0b7600.5.azurestaticapps.net/dashboard]
 	at org.testng.Assert.fail(Assert.java:96)
 	at org.testng.Assert.failNotEquals(Assert.java:776)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
@@ -274,9 +238,9 @@ Session ID: f7f4c6eca2adb286e494c00903c4de56
 	at org.testng.Assert.assertEquals(Assert.java:453)
 	at org.testng.Assert.assertEquals(Assert.java:463)
 	at StepDefination.LoginSteps.Super_Admin_Dashboard_Validation(LoginSteps.java:73)
-	at ✽.user is redirected to the Super Admin Dashboard(file:///C:/Users/chakr/git/repository2/CucumberFramework/./src/test/resources/Features/SuperAdminlogin.feature:54)
+	at ✽.user is redirected to the Super Admin Dashboard(file:///C:/Users/chakr/git/repository2/CucumberFramework/./src/test/resources/Features/SuperAdminlogin.feature:45)
 </pre></div></td>
-<td>38</td>
+<td>54</td>
 <td>Runners.TestRunner@2e6a5539</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
@@ -287,34 +251,19 @@ Session ID: f7f4c6eca2adb286e494c00903c4de56
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='Runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Successful login with valid username and password", "Super Admin Login Functionality"</td>
-<td></td>
-<td>22</td>
-<td>Runners.TestRunner@2e6a5539</td></tr>
-<tr>
-<td title='Runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Unsuccessful login with valid username and invalid password", "Super Admin Login Functionality"</td>
-<td></td>
-<td>7</td>
-<td>Runners.TestRunner@2e6a5539</td></tr>
-<tr>
-<td title='Runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Unsuccessful login with invalid username", "Super Admin Login Functionality"</td>
-<td></td>
-<td>8</td>
-<td>Runners.TestRunner@2e6a5539</td></tr>
-<tr>
 <td title='Runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User clicks on Login button without username and password", "Super Admin Login Functionality"</td>
 <td></td>
-<td>13</td>
+<td>23</td>
 <td>Runners.TestRunner@2e6a5539</td></tr>
 <tr>
 <td title='Runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Unsuccessful login Email ID with Inavlid OTP", "Super Admin Login Functionality"</td>
 <td></td>
-<td>20</td>
+<td>31</td>
 <td>Runners.TestRunner@2e6a5539</td></tr>
 <tr>
 <td title='Runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Unsuccessful login Email ID with Expired OTP", "Super Admin Login Functionality"</td>
 <td></td>
-<td>321</td>
+<td>328</td>
 <td>Runners.TestRunner@2e6a5539</td></tr>
 </table><p>
 </body>
