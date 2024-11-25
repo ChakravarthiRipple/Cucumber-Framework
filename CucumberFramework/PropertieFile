@@ -1,4 +1,12 @@
 browser chrome
-user admin
-password 123456
-url http://localhost:8888/index.php?action=Login&module=Users 
+url https://nice-bush-09f0b7600.5.azurestaticapps.net/auth/login?returnUrl=%2Fdashboard
+
+urlSAdminDash https://nice-bush-09f0b7600.5.azurestaticapps.net/dashboard
+urlAdminDash https://nice-bush-09f0b7600.5.azurestaticapps.net/admindashboard
+urlConsumerDash https://nice-bush-09f0b7600.5.azurestaticapps.net/consumerdashboard
+
+apiKey rLNhjagw46K8KoXy9nQkTwFtWgDof02k
+serverId jw2rdthr
+serverDomain jw2rdthr.mailosaur.net
+from support@ripplemetering.com
+Email muscle-make@jw2rdthr.mailosaur.net

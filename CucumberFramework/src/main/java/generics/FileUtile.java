@@ -1,4 +1,3 @@
-
 package generics;
 
 import java.io.FileInputStream;
@@ -10,20 +9,19 @@ public class FileUtile {
 
 		}
 
-		public static FileUtile objforfileutil1() {
+		public static FileUtile objforfileutil() {
 			FileUtile prop = new FileUtile();
 			return prop;
 		}
 
 		
-		/*
-		 * public String readDatafromPropfile(String key) throws IOException {
-		 * FileInputStream fis = new FileInputStream(IAutoconstant.propfilepath);
-		 * Properties prop = new Properties(); prop.load(fis); return
-		 * prop.getProperty(key);
-		 * 
-		 * }
-		 */
+		public String readDatafromPropfile(String key) throws IOException {
+			FileInputStream fis = new FileInputStream(IAutoconstant.propfilepath);
+			Properties prop = new Properties();
+			prop.load(fis);
+			return prop.getProperty(key);
+
+		}
 
 		public String readDatafromPropfile(String key, String path) throws IOException {
 			FileInputStream fis = new FileInputStream(path);
@@ -31,11 +29,6 @@ public class FileUtile {
 			prop.load(fis);
 			return prop.getProperty(key);
 
-		}
-
-		public static FileUtile objforfileutil() {
-			// TODO Auto-generated method stub
-			return null;
 		}
 
 	

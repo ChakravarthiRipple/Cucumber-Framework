@@ -1,34 +1,29 @@
 
 package StepDefination;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-
 import com.mailosaur.MailosaurClient;
 import com.mailosaur.MailosaurException;
 import com.mailosaur.models.Code;
 import com.mailosaur.models.Message;
 import com.mailosaur.models.MessageSearchParams;
 import com.mailosaur.models.SearchCriteria;
-
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import pages.Loginpage;
+import pages.LogoutFunctionality;
 
 import java.io.IOException;
-import java.time.Duration;
 
 public class LoginSteps {
 
-	WebDriverWait wait;
 	String urlSAdminDash = "https://nice-bush-09f0b7600.5.azurestaticapps.net/dashboard";
 	String urlAdminDash = "https://nice-bush-09f0b7600.5.azurestaticapps.net/admindashboard";
 	String urlConsumerDash = "https://nice-bush-09f0b7600.5.azurestaticapps.net/consumerdashboard";
+
 	String apiKey = "rLNhjagw46K8KoXy9nQkTwFtWgDof02k";
 	String serverId = "jw2rdthr";
 	String serverDomain = "jw2rdthr.mailosaur.net";
@@ -36,6 +31,8 @@ public class LoginSteps {
 	String Email = "muscle-make@jw2rdthr.mailosaur.net";
 
 	private WebDriver driver;
+	Loginpage login = new Loginpage(driver);
+	LogoutFunctionality logout = new LogoutFunctionality(driver);
 
 	public LoginSteps() {
 
@@ -53,38 +50,18 @@ public class LoginSteps {
 	}
 
 	@When("^user enters \"(.*)\" and \"(.*)\"$")
-	public void the_user_enters_valid_username_and_password(String username, String password)
-			throws InterruptedException {
-		driver.findElement(By.id("email")).sendKeys(username);
-		driver.findElement(By.xpath("//input[@type='password']")).sendKeys(password);
-		System.out.println("Entered valid username and password");
-		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		WebElement LoginButton = wait
-				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@type='submit']")));
-		LoginButton.click();
-		System.out.println("Clicked on login button");
-	}
-
-	@Then("^user is redirected to the Super Admin Dashboard$")
-	public void Super_Admin_Dashboard_Validation() throws InterruptedException {
-		Thread.sleep(10000);
-		String SuperAdminLogin = driver.getCurrentUrl();
-		System.out.println(SuperAdminLogin);
-		Assert.assertEquals(urlSAdminDash, SuperAdminLogin);
-
+	public void the_user_enters_valid_username_and_password(String username, String password) {
+		login.login(username, password);
+		login.loginButton();
+		System.out.println("System logged in successfully.");
 	}
 
 	@Then("^an error message Invalid Password is displayed$")
 	public void Invalid_password() throws InterruptedException {
 		Thread.sleep(3000);
-		String ErrorMessage = driver.findElement(By.xpath("//h2[contains(text(),'Invalid Password')]")).getText();
-		System.out.println(ErrorMessage);
-		Assert.assertEquals("Invalid Password", ErrorMessage);
-		driver.findElement(By.xpath("//button[@class='swal2-confirm swal2-styled']")).click();
-		String ErrorMessageLoginpage = driver.findElement(By.xpath("//div[contains(text(),'Invalid Password')]"))
-				.getText();
-		System.out.println(ErrorMessageLoginpage);
-		Assert.assertEquals("Invalid Password", ErrorMessageLoginpage);
+		login.InvalidpasswordErrorHandle();
+		login.OKButtonpopup();
+		login.UIpasswordError();
 	}
 
 	@And("^user is still on the Login Page$")
@@ -95,49 +72,41 @@ public class LoginSteps {
 	@Then("^an error message Invalid Email/Mobile Number is displayed$")
 	public void Invalid_Username() throws InterruptedException {
 		Thread.sleep(3000);
-		String ErrorMessage = driver.findElement(By.xpath("//h2[contains(text(),'Invalid Email/Mobile Number')]"))
-				.getText();
-		System.out.println(ErrorMessage);
-		Assert.assertEquals("Invalid Email/Mobile Number", ErrorMessage);
-		driver.findElement(By.xpath("//button[@class='swal2-confirm swal2-styled']")).click();
-		String ErrorMessageLoginpage = driver
-				.findElement(By.xpath("//div[contains(text(),' Invalid Email/Mobile Number ')]")).getText();
-		System.out.println(ErrorMessageLoginpage);
-		Assert.assertEquals("Invalid Email/Mobile Number", ErrorMessageLoginpage);
-
+		login.InvalidEmailMobileHandle();
+		login.OKButtonpopup();
+		login.UIEmailMobileError();
 	}
 
 	@When("^the user leaves blank fileds and clicks on the Login button$")
 	public void user_clicks_on_login_button_without_Username_and_password() throws InterruptedException {
 		Thread.sleep(3000);
-		driver.findElement(By.xpath("//button[@type='submit']")).click();
-
+		login.loginButton();
 	}
 
 	@Then("^an error message Email / Mobile Number is required is displayed$")
 	public void validate_Login_Username_Error_Messages() throws InterruptedException {
 		Thread.sleep(3000);
-
-		String EmailRequire = driver
-				.findElement(By.xpath("//div[contains(text(),'Email / Mobile Number is required')]")).getText();
-
-		Assert.assertEquals("Email / Mobile Number is required", EmailRequire);
-
+		login.UILoginUserfieldsError();
 	}
 
 	@Then("^an error message Password is required is displayed$")
 	public void validate_Login_Password_Error_Messages() throws InterruptedException {
 		Thread.sleep(3000);
-		String passwordRequire = driver.findElement(By.xpath("//span[contains(text(),'Password is required')]"))
-				.getText();
-		Assert.assertEquals("Password is required", passwordRequire);
-		driver.navigate().refresh();
-
+		login.UILoginPassfieldsError();
 	}
 
 	@Then("^Close the browser$")
 	public void close_the_browser() {
 		driver.quit();
+	}
+
+	@Then("^user is redirected to the Super Admin Dashboard$")
+	public void Super_Admin_Dashboard_Validation() throws InterruptedException {
+		Thread.sleep(10000);
+		String SuperAdminLogin = driver.getCurrentUrl();
+		System.out.println(SuperAdminLogin);
+		Assert.assertEquals(urlSAdminDash, SuperAdminLogin);
+
 	}
 
 	@Then("^user should be redirected to the Admin dashboard$")
@@ -158,31 +127,14 @@ public class LoginSteps {
 
 	@Then("^user logout from the application$")
 	public void user_Logout_from_App() throws InterruptedException {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		WebElement Profile = wait.until(ExpectedConditions
-				.visibilityOfElementLocated(By.xpath("//span[contains(@class,'d-none d-xl-inline-block ms-1')]")));
-		Profile.click();
-		Thread.sleep(3000);
-		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		WebElement logout = wait.until(ExpectedConditions
-				.visibilityOfElementLocated(By.xpath("//a[contains(@class,'dropdown-item text-danger')]")));
-		logout.click();
-		Thread.sleep(3000);
+		logout.LogoutFunction();
 	}
 
 	@When("^user enter Email/Mobile and Click on Send button$")
 	public void Enter_Details_and_Clickon_login_button() throws InterruptedException {
-		Thread.sleep(5000);
-		driver.findElement(By.id("email")).sendKeys(Email);
+		login.EnterUsetname(Email);
 		Thread.sleep(2000);
-		driver.findElement(By.xpath("//input[@class='form-check-input login-check']")).click();
-		WebElement SendButton = driver.findElement(By.xpath("//button[contains(text(),' Send OTP ')]"));
-		if (SendButton.isDisplayed()) {
-			SendButton.click();
-		} else {
-			System.out.println("Click again");
-
-		}
+		login.Send_OTP_Email_Mobile();
 	}
 
 	@When("^Login Valid Email ID With Valid OTP$")
@@ -200,10 +152,8 @@ public class LoginSteps {
 		Code firstCode = message.html().codes().get(0);
 		System.out.println(firstCode.value());
 		String OTP = firstCode.value();
-		WebElement EnterOTP = driver.findElement(By.xpath("//input[contains(@class,'form-control ng-un')]"));
-		EnterOTP.sendKeys(OTP);
-		Thread.sleep(3000);
-		driver.findElement(By.xpath("//button[contains(text(),'Log In')]")).click();
+		login.Enter_OTP(OTP);
+		login.loginButton();
 
 	}
 
@@ -211,18 +161,11 @@ public class LoginSteps {
 	public void Unsuccessful_login_Email_ID_with_Inavlid_OTP_requirest()
 			throws InterruptedException, IOException, MailosaurException {
 		Thread.sleep(5000);
-		WebElement EnterOTP = driver.findElement(By.xpath("//input[contains(@class,'form-control ng-un')]"));
-		EnterOTP.sendKeys("225566");
+		login.Enter_OTP("225566");
 		Thread.sleep(1000);
-		driver.findElement(By.xpath("//button[contains(text(),'Log In')]")).click();
+		login.loginButton();
 		Thread.sleep(3000);
-		String Invalid = driver.findElement(By.xpath("//h2[contains(text(),'Invalid OTP')]")).getText();
-		System.out.println(Invalid);
-		Assert.assertEquals("Invalid OTP", Invalid);
-		driver.findElement(By.xpath("//button[contains(text(),'OK')]")).click();
-		String InvalidLoginpage = driver.findElement(By.xpath("//div[contains(text(),' Invalid OTP ')]")).getText();
-		Assert.assertEquals(Invalid, InvalidLoginpage);
-
+		login.Invalid_OTP_Validation();
 	}
 
 	@When("^Unsuccessful login Email ID with Expired OTP$")
@@ -240,17 +183,10 @@ public class LoginSteps {
 		Code firstCode = message.html().codes().get(0);
 		System.out.println(firstCode.value());
 		String OTP = firstCode.value();
-		WebElement EnterOTP = driver.findElement(By.xpath("//input[contains(@class,'form-control ng-un')]"));
-		EnterOTP.sendKeys(OTP);
+		login.Enter_OTP(OTP);
 		Thread.sleep(2000);
-		driver.findElement(By.xpath("//button[contains(text(),'Log In')]")).click();
-		String OTPExpiry = driver.findElement(By.xpath("//div[contains(text(),'OTP has expired')]")).getText();
-		System.out.println(OTPExpiry);
-		Assert.assertEquals("OTP has expired", OTPExpiry);
-		driver.findElement(By.xpath("//button[contains(text(),'OK')]")).click();
-		String OTPExpiryloginpage = driver.findElement(By.xpath("//div[contains(text(),' OTP has expired ')]"))
-				.getText();
-		Assert.assertEquals(OTPExpiryloginpage, OTPExpiry);
+		login.loginButton();
+		login.OTP_Expired_Validation();
 	}
 
 }
