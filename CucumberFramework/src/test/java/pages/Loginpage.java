@@ -10,11 +10,18 @@ import org.testng.Assert;
 public class Loginpage {
 
 	WebDriver driver;
+
+	public Loginpage(WebDriver driver) {
+		this.driver = driver;
+		PageFactory.initElements(driver, this);
+
+	}
+
 	@FindBy(id = "email")
-	private WebElement username;
+	private WebElement newusername;
 
 	@FindBy(xpath = "//input[@type='password']")
-	private WebElement password;
+	private WebElement newpassword;
 
 	@FindBy(xpath = "//button[@type='submit']")
 	private WebElement loginbtn;
@@ -61,91 +68,21 @@ public class Loginpage {
 	@FindBy(xpath = "//div[contains(text(),' OTP has expired ')]")
 	private WebElement UIExpiryOTPMessage;
 
-	public WebElement getUsername() {
-		return username;
+	public void login(String username, String password) {
+		newusername.sendKeys(username);
+		newpassword.sendKeys(password);
 	}
 
-	public WebElement getPassword() {
-		return password;
-	}
-
-	public WebElement getLoginbtn() {
-		return loginbtn;
-	}
-
-	public WebElement InvalidPassward() {
-		return InvalidPassward;
-	}
-
-	public WebElement InvalidEmailMobile() {
-		return InvalidEmailMobile;
-	}
-
-	public WebElement OKButtonpopup() {
-		return OKButtonpopup;
-	}
-
-	public WebElement getErrorpassword() {
-		return loginUIErrorpassword;
-	}
-
-	public WebElement getErrorEmailMobile() {
-		return LoginUIErrorEmailMobile;
-	}
-
-	public WebElement EmailRequirefiledError() {
-		return EmailRequirefiledError;
-	}
-
-	public WebElement PasswordRequirefiledError() {
-		return PasswordRequirefiledError;
-	}
-
-	public WebElement SendOTP() {
-		return sendOTPbuton;
-	}
-
-	public WebElement Clickcheckbox() {
-		return checkboxclick;
-	}
-
-	public WebElement EnetrOTP() {
-		return EnetrOTP;
-	}
-
-	public WebElement InvalidOTP() {
-		return InvalidOTP;
-	}
-
-	public WebElement UIloginInvalidOTP() {
-		return UIloginInvalidOTP;
-	}
-
-	public WebElement ExpiryOTPpopup() {
-		return ExpiryOTPpopup;
-	}
-
-	public WebElement UIExpiryOTPMessage() {
-		return UIExpiryOTPMessage;
-	}
-
-	public Loginpage(WebDriver driver) {
-		this.driver = driver;
-		PageFactory.initElements(driver, this);
-
-	}
-
-	public void login(String newusername, String newpassword) {
-		username.sendKeys(newusername);
-		password.sendKeys(newpassword);
-	}
-
-	public void EnterUsetname(String newusername) {
-		username.sendKeys(newusername);
+	public void EnterUsetname(String username) {
+		newusername.sendKeys(username);
 	}
 
 	public void loginButton() {
 		loginbtn.click();
+	}
+
+	public void OKButtonpopup() {
+		OKButtonpopup.click();
 	}
 
 	public void InvalidpasswordErrorHandle() {

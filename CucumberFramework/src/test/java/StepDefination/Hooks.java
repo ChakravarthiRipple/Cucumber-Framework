@@ -4,6 +4,7 @@ import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
+import java.io.IOException;
 import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
@@ -13,42 +14,51 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
-public class Hooks {
+import generics.FileUtile;
+import generics.IAutoconstant;
 
-	private static WebDriver driver;
-	String Browser = "chrome";
+public class Hooks implements IAutoconstant {
 
-	@Before
-	public void setUp() {
-		if (Browser.equalsIgnoreCase("chrome")) {
-			WebDriverManager.chromedriver().setup();
-			ChromeOptions Options = new ChromeOptions();
-			Options.addArguments("disable-notifications");
-			Options.addArguments("--remote-allow-origins=*");
-			driver = new ChromeDriver(Options);
-		} else if (Browser.equalsIgnoreCase("firefox")) {
-			WebDriverManager.firefoxdriver().setup();
-			driver = new FirefoxDriver();
-		} else if (Browser.equalsIgnoreCase("edge")) {
-			WebDriverManager.edgedriver().setup();
-			driver = new EdgeDriver();
-		} else if (Browser.equalsIgnoreCase("safari")) {
-			driver = new SafariDriver();
-		} else {
-			System.out.println("Error");
-		}
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-	}
+    private static WebDriver driver;
 
-	@After
-	public void tearDown() {
-		if (driver != null) {
-			driver.quit();
-		}
-	}
+    @Before
+    public void setUp() throws IOException {
+        String browser = FileUtile.objforfileutil().readDatafromPropfile("browser");
+
+        if (browser.equalsIgnoreCase("chrome")) {
+            WebDriverManager.chromedriver().setup();
+            ChromeOptions options = new ChromeOptions();
+            options.addArguments("disable-notifications");
+            options.addArguments("--remote-allow-origins=*");
+            driver = new ChromeDriver(options);
+        } else if (browser.equalsIgnoreCase("firefox")) {
+            WebDriverManager.firefoxdriver().setup();
+            driver = new FirefoxDriver();
+        } else if (browser.equalsIgnoreCase("edge")) {
+            WebDriverManager.edgedriver().setup();
+            driver = new EdgeDriver();
+        } else if (browser.equalsIgnoreCase("safari")) {
+            driver = new SafariDriver();
+        } else {
+            System.out.println("Unsupported browser: " + browser);
+            throw new IllegalArgumentException("Unsupported browser: " + browser);
+        }
+
+        String url = FileUtile.objforfileutil().readDatafromPropfile("url");
+        driver.get(url);
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+    }
+
+    @After
+    public void tearDown() {
+        if (driver != null) {
+            driver.quit();
+        }
+    }
 
 	public static WebDriver getDriver() {
+		// TODO Auto-generated method stub
 		return driver;
 	}
 }

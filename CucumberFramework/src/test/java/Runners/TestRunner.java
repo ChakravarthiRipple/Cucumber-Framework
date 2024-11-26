@@ -7,7 +7,7 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
 		features = {"./src/test/resources/Features/SuperAdminlogin.feature"},
 		glue = {"StepDefination"},
-		dryRun = true,
+		dryRun = false,
 		monochrome = true,
 		plugin = {"pretty","json:target/cucumber.json"}
 		)

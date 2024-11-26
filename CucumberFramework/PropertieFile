@@ -1,5 +1,5 @@
 browser chrome
-url https://nice-bush-09f0b7600.5.azurestaticapps.net/auth/login?returnUrl=%2Fdashboard
+url https://nice-bush-09f0b7600.5.azurestaticapps.net/auth/login?returnUrl=%2F
 
 urlSAdminDash https://nice-bush-09f0b7600.5.azurestaticapps.net/dashboard
 urlAdminDash https://nice-bush-09f0b7600.5.azurestaticapps.net/admindashboard

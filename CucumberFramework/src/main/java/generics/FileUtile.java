@@ -27,7 +27,7 @@ public class FileUtile {
 			FileInputStream fis = new FileInputStream(path);
 			Properties prop = new Properties();
 			prop.load(fis);
-			return prop.getProperty(key);
+			return prop.getProperty(path);
 
 		}
 

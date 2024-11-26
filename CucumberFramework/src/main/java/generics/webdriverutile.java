@@ -1,24 +1,32 @@
 package generics;
 
-
 import java.time.Duration;
 import java.util.Set;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
+
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class webdriverutile {
-	private static final String WebElement = null;
-	WebDriver driver;
+
+	private WebDriver driver;
 
 	public webdriverutile(WebDriver driver) {
+
 		this.driver = driver;
+	}
+
+	public String getTitle() {
+
+		return driver.getTitle();
+	}
+
+	public String getCurrentURL() {
+
+		return driver.getCurrentUrl();
 	}
 
 	public void refresh() {
@@ -31,10 +39,6 @@ public class webdriverutile {
 
 	public void ImplicitlyWait() {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-	}
-	public void ExplicityWait(WebElement Element) {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(WebElement)));
 	}
 
 	public void selectvaluefromdd(WebElement element, String value) {
@@ -113,7 +117,8 @@ public class webdriverutile {
 			}
 		}
 	}
-	public void sendkeysto(WebElement element ,String Keytosend) {
+
+	public void sendkeysto(WebElement element, String Keytosend) {
 		element.sendKeys(Keytosend);
 
 	}
