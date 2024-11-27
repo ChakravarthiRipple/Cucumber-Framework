@@ -1,27 +1,187 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="13" passed="5" failed="8" skipped="0">
+<testng-results ignored="0" total="38" passed="38" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-11-26T09:52:52Z" name="Default suite" finished-at="2024-11-26T10:02:19Z" duration-ms="567474">
+  <suite started-at="2024-11-27T06:18:56Z" name="Default suite" finished-at="2024-11-27T06:18:57Z" duration-ms="1172">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@2e6a5539]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2024-11-26T09:52:52Z" name="Default test" finished-at="2024-11-26T10:02:19Z" duration-ms="567474">
+    <test started-at="2024-11-27T06:18:56Z" name="Default test" finished-at="2024-11-27T06:18:57Z" duration-ms="1172">
       <class name="Runners.TestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:Runners.TestRunner@2e6a5539]" started-at="2024-11-26T09:52:52Z" name="setUpClass" finished-at="2024-11-26T09:52:52Z" duration-ms="485" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:Runners.TestRunner@2e6a5539]" started-at="2024-11-27T06:18:56Z" name="setUpClass" finished-at="2024-11-27T06:18:56Z" duration-ms="367" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@c6bf8d9]]>
+                <![CDATA[org.testng.TestRunner@5bcde458]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@2e6a5539]" started-at="2024-11-26T09:52:52Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-26T09:53:17Z" duration-ms="24022" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@2e6a5539]" started-at="2024-11-27T06:18:56Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-27T06:18:57Z" duration-ms="145" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Successful login with valid username and password"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Admin Login Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@2e6a5539]" started-at="2024-11-27T06:18:57Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-27T06:18:57Z" duration-ms="6" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Unsuccessful login with valid username and invalid password"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Admin Login Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@2e6a5539]" started-at="2024-11-27T06:18:57Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-27T06:18:57Z" duration-ms="5" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Unsuccessful login with invalid username"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Admin Login Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@2e6a5539]" started-at="2024-11-27T06:18:57Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-27T06:18:57Z" duration-ms="7" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Unsuccessful login with invalid username"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Admin Login Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@2e6a5539]" started-at="2024-11-27T06:18:57Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-27T06:18:57Z" duration-ms="5" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Unsuccessful login with invalid username"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Admin Login Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@2e6a5539]" started-at="2024-11-27T06:18:57Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-27T06:18:57Z" duration-ms="4" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Successful login with valid username and password"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Comsumer Login Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@2e6a5539]" started-at="2024-11-27T06:18:57Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-27T06:18:57Z" duration-ms="5" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Unsuccessful login with valid username and invalid password"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Comsumer Login Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@2e6a5539]" started-at="2024-11-27T06:18:57Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-27T06:18:57Z" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Unsuccessful login with invalid username"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Comsumer Login Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@2e6a5539]" started-at="2024-11-27T06:18:57Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-27T06:18:57Z" duration-ms="5" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Unsuccessful login with invalid username"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Comsumer Login Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@2e6a5539]" started-at="2024-11-27T06:18:57Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-27T06:18:57Z" duration-ms="5" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Unsuccessful login with invalid username"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Comsumer Login Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@2e6a5539]" started-at="2024-11-27T06:18:57Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-27T06:18:57Z" duration-ms="3" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -37,40 +197,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@2e6a5539]" started-at="2024-11-26T09:53:17Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-26T09:53:36Z" duration-ms="19984" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Successful login with valid username and password"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Super Admin Login Functionality"]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [https://nice-bush-09f0b7600.5.azurestaticapps.net/auth/login?returnUrl=%2Fdashboard] but found [https://nice-bush-09f0b7600.5.azurestaticapps.net/dashboard]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [https://nice-bush-09f0b7600.5.azurestaticapps.net/auth/login?returnUrl=%2Fdashboard] but found [https://nice-bush-09f0b7600.5.azurestaticapps.net/dashboard]
-at org.testng.Assert.fail(Assert.java:96)
-at org.testng.Assert.failNotEquals(Assert.java:776)
-at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-at org.testng.Assert.assertEquals(Assert.java:118)
-at org.testng.Assert.assertEquals(Assert.java:453)
-at org.testng.Assert.assertEquals(Assert.java:463)
-at StepDefination.LoginSteps.Super_Admin_Dashboard_Validation(LoginSteps.java:93)
-at ✽.user is redirected to the Super Admin Dashboard(file:///C:/Users/chakr/git/repository2/CucumberFramework/./src/test/resources/Features/SuperAdminlogin.feature:8)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@2e6a5539]" started-at="2024-11-26T09:53:36Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-26T09:53:56Z" duration-ms="19608" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@2e6a5539]" started-at="2024-11-27T06:18:57Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-27T06:18:57Z" duration-ms="3" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -86,7 +213,103 @@ at ✽.user is redirected to the Super Admin Dashboard(file:///C:/Users/chakr/gi
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@2e6a5539]" started-at="2024-11-26T09:53:56Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-26T09:54:19Z" duration-ms="22891" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@2e6a5539]" started-at="2024-11-27T06:18:57Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-27T06:18:57Z" duration-ms="5" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Successful login with valid username and password"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Super Admin Login Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@2e6a5539]" started-at="2024-11-27T06:18:57Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-27T06:18:57Z" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Successful login with valid username and password"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Super Admin Login Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@2e6a5539]" started-at="2024-11-27T06:18:57Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-27T06:18:57Z" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Successful login with valid username and password"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Super Admin Login Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@2e6a5539]" started-at="2024-11-27T06:18:57Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-27T06:18:57Z" duration-ms="5" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Successful login with valid username and password"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Super Admin Login Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@2e6a5539]" started-at="2024-11-27T06:18:57Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-27T06:18:57Z" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Successful login with valid username and password"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Super Admin Login Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@2e6a5539]" started-at="2024-11-27T06:18:57Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-27T06:18:57Z" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Successful login with valid username and password"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Super Admin Login Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@2e6a5539]" started-at="2024-11-27T06:18:57Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-27T06:18:57Z" duration-ms="4" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -99,57 +322,10 @@ at ✽.user is redirected to the Super Admin Dashboard(file:///C:/Users/chakr/gi
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//button[@class='swal2-confirm swal2-styled']"}
-  (Session info: chrome=131.0.6778.86)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.8.1', revision: '8ebccac989'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.13'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [e93941ada9bcca7f63f8eae01bac7625, findElement {using=xpath, value=//button[@class='swal2-confirm swal2-styled']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\chakr\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55356}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55356/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: e93941ada9bcca7f63f8eae01bac7625]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//button[@class='swal2-confirm swal2-styled']"}
-  (Session info: chrome=131.0.6778.86)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.8.1', revision: '8ebccac989'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.13'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [e93941ada9bcca7f63f8eae01bac7625, findElement {using=xpath, value=//button[@class='swal2-confirm swal2-styled']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\chakr\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55356}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55356/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: e93941ada9bcca7f63f8eae01bac7625
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-at jdk.proxy2/jdk.proxy2.$Proxy28.click(Unknown Source)
-at pages.Loginpage.UIpasswordError(Loginpage.java:106)
-at StepDefination.LoginSteps.Invalid_password(LoginSteps.java:53)
-at ✽.an error message Invalid Password is displayed(file:///C:/Users/chakr/git/repository2/CucumberFramework/./src/test/resources/Features/SuperAdminlogin.feature:19)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@2e6a5539]" started-at="2024-11-26T09:54:19Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-26T09:54:43Z" duration-ms="24004" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@2e6a5539]" started-at="2024-11-27T06:18:57Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-27T06:18:57Z" duration-ms="3" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -162,57 +338,10 @@ at ✽.an error message Invalid Password is displayed(file:///C:/Users/chakr/git
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//button[@class='swal2-confirm swal2-styled']"}
-  (Session info: chrome=131.0.6778.86)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.8.1', revision: '8ebccac989'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.13'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [f0b5b318245b474b850af80234a32184, findElement {using=xpath, value=//button[@class='swal2-confirm swal2-styled']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\chakr\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55383}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55383/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: f0b5b318245b474b850af80234a32184]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//button[@class='swal2-confirm swal2-styled']"}
-  (Session info: chrome=131.0.6778.86)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.8.1', revision: '8ebccac989'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.13'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [f0b5b318245b474b850af80234a32184, findElement {using=xpath, value=//button[@class='swal2-confirm swal2-styled']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\chakr\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55383}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55383/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: f0b5b318245b474b850af80234a32184
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-at jdk.proxy2/jdk.proxy2.$Proxy28.click(Unknown Source)
-at pages.Loginpage.UIpasswordError(Loginpage.java:106)
-at StepDefination.LoginSteps.Invalid_password(LoginSteps.java:53)
-at ✽.an error message Invalid Password is displayed(file:///C:/Users/chakr/git/repository2/CucumberFramework/./src/test/resources/Features/SuperAdminlogin.feature:19)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@2e6a5539]" started-at="2024-11-26T09:54:43Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-26T09:55:06Z" duration-ms="22526" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@2e6a5539]" started-at="2024-11-27T06:18:57Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-27T06:18:57Z" duration-ms="3" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -225,57 +354,90 @@ at ✽.an error message Invalid Password is displayed(file:///C:/Users/chakr/git
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//button[@class='swal2-confirm swal2-styled']"}
-  (Session info: chrome=131.0.6778.86)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.8.1', revision: '8ebccac989'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.13'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [bfc7a58e4b5625bf0e571378e0e04acd, findElement {using=xpath, value=//button[@class='swal2-confirm swal2-styled']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\chakr\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55410}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55410/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: bfc7a58e4b5625bf0e571378e0e04acd]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//button[@class='swal2-confirm swal2-styled']"}
-  (Session info: chrome=131.0.6778.86)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.8.1', revision: '8ebccac989'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.13'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [bfc7a58e4b5625bf0e571378e0e04acd, findElement {using=xpath, value=//button[@class='swal2-confirm swal2-styled']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\chakr\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55410}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55410/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: bfc7a58e4b5625bf0e571378e0e04acd
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-at jdk.proxy2/jdk.proxy2.$Proxy28.click(Unknown Source)
-at pages.Loginpage.UIpasswordError(Loginpage.java:106)
-at StepDefination.LoginSteps.Invalid_password(LoginSteps.java:53)
-at ✽.an error message Invalid Password is displayed(file:///C:/Users/chakr/git/repository2/CucumberFramework/./src/test/resources/Features/SuperAdminlogin.feature:19)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@2e6a5539]" started-at="2024-11-26T09:55:06Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-26T09:55:29Z" duration-ms="23958" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@2e6a5539]" started-at="2024-11-27T06:18:57Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-27T06:18:57Z" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Unsuccessful login with valid username and invalid password"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Super Admin Login Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@2e6a5539]" started-at="2024-11-27T06:18:57Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-27T06:18:57Z" duration-ms="4" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Unsuccessful login with valid username and invalid password"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Super Admin Login Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@2e6a5539]" started-at="2024-11-27T06:18:57Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-27T06:18:57Z" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Unsuccessful login with valid username and invalid password"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Super Admin Login Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@2e6a5539]" started-at="2024-11-27T06:18:57Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-27T06:18:57Z" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Unsuccessful login with valid username and invalid password"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Super Admin Login Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@2e6a5539]" started-at="2024-11-27T06:18:57Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-27T06:18:57Z" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Unsuccessful login with valid username and invalid password"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Super Admin Login Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@2e6a5539]" started-at="2024-11-27T06:18:57Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-27T06:18:57Z" duration-ms="3" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -288,57 +450,10 @@ at ✽.an error message Invalid Password is displayed(file:///C:/Users/chakr/git
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//button[@class='swal2-confirm swal2-styled']"}
-  (Session info: chrome=131.0.6778.86)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.8.1', revision: '8ebccac989'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.13'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [9f8d9a6c3736ddfee5a271a03185bdff, findElement {using=xpath, value=//button[@class='swal2-confirm swal2-styled']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\chakr\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55437}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55437/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 9f8d9a6c3736ddfee5a271a03185bdff]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//button[@class='swal2-confirm swal2-styled']"}
-  (Session info: chrome=131.0.6778.86)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.8.1', revision: '8ebccac989'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.13'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [9f8d9a6c3736ddfee5a271a03185bdff, findElement {using=xpath, value=//button[@class='swal2-confirm swal2-styled']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\chakr\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55437}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55437/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 9f8d9a6c3736ddfee5a271a03185bdff
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-at jdk.proxy2/jdk.proxy2.$Proxy28.click(Unknown Source)
-at pages.Loginpage.UIEmailMobileError(Loginpage.java:113)
-at StepDefination.LoginSteps.Invalid_Username(LoginSteps.java:66)
-at ✽.an error message Invalid Email/Mobile Number is displayed(file:///C:/Users/chakr/git/repository2/CucumberFramework/./src/test/resources/Features/SuperAdminlogin.feature:30)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@2e6a5539]" started-at="2024-11-26T09:55:29Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-26T09:55:53Z" duration-ms="23203" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@2e6a5539]" started-at="2024-11-27T06:18:57Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-27T06:18:57Z" duration-ms="4" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -351,57 +466,10 @@ at ✽.an error message Invalid Email/Mobile Number is displayed(file:///C:/User
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//button[@class='swal2-confirm swal2-styled']"}
-  (Session info: chrome=131.0.6778.86)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.8.1', revision: '8ebccac989'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.13'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [ae7ba2020d3576032bb14ba62337b6b4, findElement {using=xpath, value=//button[@class='swal2-confirm swal2-styled']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\chakr\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55463}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55463/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: ae7ba2020d3576032bb14ba62337b6b4]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//button[@class='swal2-confirm swal2-styled']"}
-  (Session info: chrome=131.0.6778.86)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.8.1', revision: '8ebccac989'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.13'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [ae7ba2020d3576032bb14ba62337b6b4, findElement {using=xpath, value=//button[@class='swal2-confirm swal2-styled']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\chakr\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55463}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55463/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: ae7ba2020d3576032bb14ba62337b6b4
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-at jdk.proxy2/jdk.proxy2.$Proxy28.click(Unknown Source)
-at pages.Loginpage.UIEmailMobileError(Loginpage.java:113)
-at StepDefination.LoginSteps.Invalid_Username(LoginSteps.java:66)
-at ✽.an error message Invalid Email/Mobile Number is displayed(file:///C:/Users/chakr/git/repository2/CucumberFramework/./src/test/resources/Features/SuperAdminlogin.feature:30)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@2e6a5539]" started-at="2024-11-26T09:55:53Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-26T09:56:14Z" duration-ms="21607" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@2e6a5539]" started-at="2024-11-27T06:18:57Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-27T06:18:57Z" duration-ms="4" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -414,57 +482,90 @@ at ✽.an error message Invalid Email/Mobile Number is displayed(file:///C:/User
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//button[@class='swal2-confirm swal2-styled']"}
-  (Session info: chrome=131.0.6778.86)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.8.1', revision: '8ebccac989'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.13'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [063598b7a972ebe53cc3ae70476e5f19, findElement {using=xpath, value=//button[@class='swal2-confirm swal2-styled']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\chakr\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55493}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55493/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 063598b7a972ebe53cc3ae70476e5f19]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//button[@class='swal2-confirm swal2-styled']"}
-  (Session info: chrome=131.0.6778.86)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.8.1', revision: '8ebccac989'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.13'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [063598b7a972ebe53cc3ae70476e5f19, findElement {using=xpath, value=//button[@class='swal2-confirm swal2-styled']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\chakr\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55493}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55493/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 063598b7a972ebe53cc3ae70476e5f19
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-at jdk.proxy2/jdk.proxy2.$Proxy28.click(Unknown Source)
-at pages.Loginpage.UIEmailMobileError(Loginpage.java:113)
-at StepDefination.LoginSteps.Invalid_Username(LoginSteps.java:66)
-at ✽.an error message Invalid Email/Mobile Number is displayed(file:///C:/Users/chakr/git/repository2/CucumberFramework/./src/test/resources/Features/SuperAdminlogin.feature:30)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@2e6a5539]" started-at="2024-11-26T09:56:14Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-26T09:56:26Z" duration-ms="12070" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@2e6a5539]" started-at="2024-11-27T06:18:57Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-27T06:18:57Z" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Unsuccessful login with invalid username"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Super Admin Login Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@2e6a5539]" started-at="2024-11-27T06:18:57Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-27T06:18:57Z" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Unsuccessful login with invalid username"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Super Admin Login Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@2e6a5539]" started-at="2024-11-27T06:18:57Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-27T06:18:57Z" duration-ms="4" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Unsuccessful login with invalid username"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Super Admin Login Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@2e6a5539]" started-at="2024-11-27T06:18:57Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-27T06:18:57Z" duration-ms="4" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Unsuccessful login with invalid username"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Super Admin Login Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@2e6a5539]" started-at="2024-11-27T06:18:57Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-27T06:18:57Z" duration-ms="7" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Unsuccessful login with invalid username"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Super Admin Login Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@2e6a5539]" started-at="2024-11-27T06:18:57Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-27T06:18:57Z" duration-ms="2" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -480,7 +581,7 @@ at ✽.an error message Invalid Email/Mobile Number is displayed(file:///C:/User
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@2e6a5539]" started-at="2024-11-26T09:56:26Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-26T09:56:54Z" duration-ms="27663" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@2e6a5539]" started-at="2024-11-27T06:18:57Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-27T06:18:57Z" duration-ms="3" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -493,27 +594,10 @@ at ✽.an error message Invalid Email/Mobile Number is displayed(file:///C:/User
               </value>
             </param>
           </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [https://nice-bush-09f0b7600.5.azurestaticapps.net/auth/login?returnUrl=%2Fdashboard] but found [https://nice-bush-09f0b7600.5.azurestaticapps.net/dashboard]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [https://nice-bush-09f0b7600.5.azurestaticapps.net/auth/login?returnUrl=%2Fdashboard] but found [https://nice-bush-09f0b7600.5.azurestaticapps.net/dashboard]
-at org.testng.Assert.fail(Assert.java:96)
-at org.testng.Assert.failNotEquals(Assert.java:776)
-at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-at org.testng.Assert.assertEquals(Assert.java:118)
-at org.testng.Assert.assertEquals(Assert.java:453)
-at org.testng.Assert.assertEquals(Assert.java:463)
-at StepDefination.LoginSteps.Super_Admin_Dashboard_Validation(LoginSteps.java:93)
-at ✽.user is redirected to the Super Admin Dashboard(file:///C:/Users/chakr/git/repository2/CucumberFramework/./src/test/resources/Features/SuperAdminlogin.feature:47)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@2e6a5539]" started-at="2024-11-26T09:56:54Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-26T09:57:09Z" duration-ms="15458" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@2e6a5539]" started-at="2024-11-27T06:18:57Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-27T06:18:57Z" duration-ms="3" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -529,7 +613,7 @@ at ✽.user is redirected to the Super Admin Dashboard(file:///C:/Users/chakr/gi
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@2e6a5539]" started-at="2024-11-26T09:57:09Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-26T10:02:19Z" duration-ms="309439" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@2e6a5539]" started-at="2024-11-27T06:18:57Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-27T06:18:57Z" duration-ms="2" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -545,7 +629,7 @@ at ✽.user is redirected to the Super Admin Dashboard(file:///C:/Users/chakr/gi
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runners.TestRunner@2e6a5539]" started-at="2024-11-26T10:02:19Z" name="tearDownClass" finished-at="2024-11-26T10:02:19Z" duration-ms="511" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runners.TestRunner@2e6a5539]" started-at="2024-11-27T06:18:57Z" name="tearDownClass" finished-at="2024-11-27T06:18:57Z" duration-ms="450" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

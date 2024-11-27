@@ -1,28 +1,24 @@
-@tag
-Feature: Login Functionality
+Feature: Comsumer Login Functionality
 
-  @tag1
+  Background: Given user is already on Login Page
+
   Scenario Outline: Successful login with valid username and password
-    Given user is already on Login Page
-    When user enters "chakravarthigattupelly@gmail.com" and "Chakri@932"
+    When user enters "<username>" and "<password>"
     Then user should be redirected to the Consumer dashboard
     Then user logout from the application
-    Then Close the browser
 
-  @tag2
   Scenario Outline: Unsuccessful login with valid username and invalid password
-    Given user is already on Login Page
-    When user enters "chakravarthigattupelly@gmail.com" and "Plural@12"
+    When user enters "<username>" and "<password>"
     Then an error message Invalid Password is displayed
     And user is still on the Login Page
-    Then Close the browser
 
-  @tag3
   Scenario Outline: Unsuccessful login with invalid username
-    Given user is already on Login Page
-    When user enters "chakravarthi@gmail.com" and "Chakri@932"
+    When user enters "<username>" and "<password>"
     Then an error message Invalid Email/Mobile Number is displayed
     And user is still on the Login Page
-    Then Close the browser
 
- 
+    Examples: 
+      | username                         | password   |
+      | chakravarthigattupelly@gmail.com | Chakri@932 |
+      | chakravarthigattupelly@gmail.com | Plural@12  |
+      | chakravarthi@gmail.com           | Chakri@932 |

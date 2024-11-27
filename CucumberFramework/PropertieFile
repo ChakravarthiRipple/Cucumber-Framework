@@ -1,9 +1,9 @@
 browser chrome
-url https://nice-bush-09f0b7600.5.azurestaticapps.net/auth/login?returnUrl=%2F
+url https://nice-sky-003a89d00.5.azurestaticapps.net/auth/login?returnUrl=%2F
 
-urlSAdminDash https://nice-bush-09f0b7600.5.azurestaticapps.net/dashboard
-urlAdminDash https://nice-bush-09f0b7600.5.azurestaticapps.net/admindashboard
-urlConsumerDash https://nice-bush-09f0b7600.5.azurestaticapps.net/consumerdashboard
+urlSAdminDash https://nice-sky-003a89d00.5.azurestaticapps.net/dashboard
+urlAdminDash https://nice-sky-003a89d00.5.azurestaticapps.net/admindashboard
+urlConsumerDash https://nice-sky-003a89d00.5.azurestaticapps.net/consumerdashboard
 
 apiKey rLNhjagw46K8KoXy9nQkTwFtWgDof02k
 serverId jw2rdthr

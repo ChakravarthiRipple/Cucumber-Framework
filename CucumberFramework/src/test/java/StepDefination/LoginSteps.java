@@ -10,12 +10,14 @@ import com.mailosaur.models.Message;
 import com.mailosaur.models.MessageSearchParams;
 import com.mailosaur.models.SearchCriteria;
 
+import generics.ExcelUtile;
 import generics.FileUtile;
 import generics.webdriverutile;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import pages.CreateUser;
 import pages.Loginpage;
 import pages.LogoutFunctionality;
 
@@ -26,6 +28,14 @@ public class LoginSteps {
 	Loginpage loginAction = new Loginpage(driver);
 	LogoutFunctionality logout = new LogoutFunctionality(driver);
 	webdriverutile WebUtile = new webdriverutile(driver);
+	CreateUser usersaction = new CreateUser(driver);
+
+	@Given("I load test data from Excel")
+	public void loadTestData() throws Exception {
+
+		ExcelUtile excelUtils = new ExcelUtile("./src/test/resources/TestData/TestData.xlsx", "LoginData");
+
+	}
 
 	@Given("^user is already on Login Page$")
 	public void user_already_on_login_page() {
@@ -40,7 +50,8 @@ public class LoginSteps {
 	public void the_user_enters_valid_username_and_password(String username, String password)
 			throws InterruptedException {
 		Thread.sleep(5000);
-		loginAction.login(username, password);
+		loginAction.EnterUsername(username);
+		loginAction.EnterPassword(password);
 		loginAction.loginButton();
 		System.out.println("System logged in successfully.");
 	}
@@ -55,7 +66,7 @@ public class LoginSteps {
 
 	@And("^user is still on the Login Page$")
 	public void Refresh_Login_page() {
-		/* WebUtile.refresh(); */
+		 WebUtile.refresh(); 
 	}
 
 	@Then("^an error message Invalid Email/Mobile Number is displayed$")
@@ -124,7 +135,7 @@ public class LoginSteps {
 	@When("^user enter Email/Mobile and Click on Send button$")
 	public void Enter_Details_and_Clickon_login_button() throws InterruptedException, IOException {
 		String Email = FileUtile.objforfileutil().readDatafromPropfile("Email");
-		loginAction.EnterUsetname(Email);
+		loginAction.EnterUsername(Email);
 		Thread.sleep(2000);
 		loginAction.Send_OTP_Email_Mobile();
 	}

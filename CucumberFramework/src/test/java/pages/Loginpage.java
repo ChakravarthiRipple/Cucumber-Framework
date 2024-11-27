@@ -27,19 +27,19 @@ public class Loginpage {
 	private WebElement loginbtn;
 
 	@FindBy(xpath = "//h2[contains(text(),'Invalid Password')]")
-	private WebElement InvalidPassward;
+	private WebElement InvalidPasswardPopup;
 
 	@FindBy(xpath = "//h2[contains(text(),'Invalid Email/Mobile Number')]")
-	private WebElement InvalidEmailMobile;
+	private WebElement InvalidEmailMobilePopup;
 
 	@FindBy(xpath = "//button[@class='swal2-confirm swal2-styled']")
 	private WebElement OKButtonpopup;
 
 	@FindBy(xpath = "//div[contains(text(),'Invalid Password')]")
-	private WebElement loginUIErrorpassword;
+	private WebElement UIInvalidpassword;
 
 	@FindBy(xpath = "//div[contains(text(),' Invalid Email/Mobile Number ')]")
-	private WebElement LoginUIErrorEmailMobile;
+	private WebElement UIInvalidEmailMobile;
 
 	@FindBy(xpath = "//div[contains(text(),'Email / Mobile Number is required')]")
 	private WebElement EmailRequirefiledError;
@@ -51,7 +51,7 @@ public class Loginpage {
 	private WebElement checkboxclick;
 
 	@FindBy(xpath = "//button[contains(text(),' Send OTP ')]")
-	private WebElement sendOTPbuton;
+	private WebElement LoginsendOTPbutton;
 
 	@FindBy(xpath = "//input[contains(@class,'form-control ng-un')]")
 	private WebElement EnetrOTP;
@@ -60,7 +60,7 @@ public class Loginpage {
 	private WebElement InvalidOTP;
 
 	@FindBy(xpath = "//div[contains(text(),' Invalid OTP ')]")
-	private WebElement UIloginInvalidOTP;
+	private WebElement UIInvalidOTP;
 
 	@FindBy(xpath = "//div[contains(text(),'OTP has expired')]")
 	private WebElement ExpiryOTPpopup;
@@ -68,12 +68,12 @@ public class Loginpage {
 	@FindBy(xpath = "//div[contains(text(),' OTP has expired ')]")
 	private WebElement UIExpiryOTPMessage;
 
-	public void login(String username, String password) {
-		newusername.sendKeys(username);
+	public void EnterPassword(String password) {
+
 		newpassword.sendKeys(password);
 	}
 
-	public void EnterUsetname(String username) {
+	public void EnterUsername(String username) {
 		newusername.sendKeys(username);
 	}
 
@@ -86,28 +86,28 @@ public class Loginpage {
 	}
 
 	public void InvalidpasswordErrorHandle() {
-		String ErrorMessage = InvalidPassward.getText();
+		String ErrorMessage = InvalidPasswardPopup.getText();
 		System.out.println(ErrorMessage);
 		Assert.assertEquals("Invalid Password", ErrorMessage);
 		OKButtonpopup.click();
 	}
 
 	public void InvalidEmailMobileHandle() {
-		String ErrorMessage = InvalidEmailMobile.getText();
+		String ErrorMessage = InvalidEmailMobilePopup.getText();
 		System.out.println(ErrorMessage);
 		Assert.assertEquals("Invalid Email/Mobile Number", ErrorMessage);
 		OKButtonpopup.click();
 	}
 
 	public void UIpasswordError() {
-		String ErrorMessage = loginUIErrorpassword.getText();
+		String ErrorMessage = UIInvalidpassword.getText();
 		System.out.println(ErrorMessage);
 		Assert.assertEquals("Invalid Password", ErrorMessage);
 		OKButtonpopup.click();
 	}
 
 	public void UIEmailMobileError() {
-		String ErrorMessage = LoginUIErrorEmailMobile.getText();
+		String ErrorMessage = UIInvalidEmailMobile.getText();
 		System.out.println(ErrorMessage);
 		Assert.assertEquals("Invalid Email/Mobile Number", ErrorMessage);
 		OKButtonpopup.click();
@@ -127,7 +127,7 @@ public class Loginpage {
 
 	public void Send_OTP_Email_Mobile() {
 		checkboxclick.click();
-		sendOTPbuton.click();
+		LoginsendOTPbutton.click();
 	}
 
 	public void Enter_OTP(String OTP) {
@@ -138,7 +138,7 @@ public class Loginpage {
 		String Invalid = InvalidOTP.getText();
 		System.out.println(Invalid);
 		Assert.assertEquals("Invalid OTP", Invalid);
-		String InvalidLoginpage = UIloginInvalidOTP.getText();
+		String InvalidLoginpage = UIInvalidOTP.getText();
 		Assert.assertEquals(Invalid, InvalidLoginpage);
 	}
 
