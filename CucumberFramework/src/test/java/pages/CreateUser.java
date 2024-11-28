@@ -1,13 +1,26 @@
 package pages;
 
+import java.io.FileInputStream;
+import java.io.IOException;
+
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
+
+import generics.ExcelUtile;
+import generics.webdriverutile;
 
 public class CreateUser {
 
 	WebDriver driver;
+	webdriverutile WebUtile = new webdriverutile(driver);
 
 	public CreateUser(WebDriver driver) {
 
@@ -27,20 +40,22 @@ public class CreateUser {
 	@FindBy(id = "email")
 	private WebElement EnterEmail;
 
-	@FindBy(xpath = "//div[contains(text(),'Select Country')]")
+	@FindBy(xpath = "//ng-select[@placeholder='Select Country']")
 	private WebElement countrycodedd;
 
-	@FindBy(xpath = "//span[contains(text(),'(+91)')]")
-	private WebElement countrycodeIndia;
-
-	@FindBy(xpath = "//span[contains(text(),'(+971)')]")
-	private WebElement countrycodeUAE;
-
-	@FindBy(xpath = "//span[contains(text(),'(+86)')]")
-	private WebElement countrycodeChina;
+	/*
+	 * @FindBy(xpath = "//span[contains(text(),'(+91)')]") private WebElement
+	 * countrycodeIndia;
+	 * 
+	 * @FindBy(xpath = "//span[contains(text(),'(+971)')]") private WebElement
+	 * countrycodeUAE;
+	 * 
+	 * @FindBy(xpath = "//span[contains(text(),'(+86)')]") private WebElement
+	 * countrycodeChina;
+	 */
 
 	@FindBy(id = "phoneNumber")
-	private WebElement phonenumber;
+	private WebElement Phonenumber;
 
 	@FindBy(xpath = "//div[@class='ng-select-container ng-has-value']")
 	private WebElement roledd;
@@ -72,7 +87,18 @@ public class CreateUser {
 	@FindBy(xpath = "//button[@class='btn btn-outline-primary' and contains(text(),'Cancel')]")
 	private WebElement Cancelbtn;
 
-	public void NavigateTOcreateuser(String password) {
+	public void Enter_user_details(String firstname, String lastname, String email, String phonenumber) {
+		Enterfirstname.sendKeys(firstname);
+		Enterlastname.sendKeys(lastname);
+		EnterEmail.sendKeys(email);
+		countrycodedd.click();
+		// countrycodeIndia.click();
+		Phonenumber.sendKeys(phonenumber);
+		roledd.click();
+		RoleSuperAdmin.click();
+		RoleAdmin.click();
 
 	}
+
+	
 }
